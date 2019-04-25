@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour {
+public class Shooter : MonoBehaviour {
 
     public GameObject bulletPrefab;
 
