@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class Pilot2D : MonoBehaviour
 {
+    private Vector3 vel;
     public float speed = 1;
     public float shiftSpeed = 0.5f;
-    private Rigidbody rb;
+
     private Transform t;
+
     public List<GameObject> guns; // manually add the guns added to the player to this list
 
-    private float xBoundary = 5.5f;
-    private float yBoundary = 4.3f;
+    private float xBoundary;
+    private float yBoundary;
 
     private Vector2 playerSize;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.GetComponent<Rigidbody>(); // Don't forget to add a Rigidbody component to the object!
         t = this.GetComponent<Transform>();
         playerSize.x = GetComponent<BoxCollider>().size.x;
         playerSize.y = GetComponent<BoxCollider>().size.y;
@@ -32,77 +33,33 @@ public class Pilot2D : MonoBehaviour
 
         // Movement
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        vel = new Vector3 (Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0.0f);
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
         {
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-            {
-                rb.velocity = new Vector3(-shiftSpeed, rb.velocity.y, 0);
-            }
-            else
-            {
-                rb.velocity = new Vector3(-speed, rb.velocity.y, 0);
-            }
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-            {
-                rb.velocity = new Vector3(shiftSpeed, rb.velocity.y, 0);
-            }
-            else
-            {
-                rb.velocity = new Vector3(speed, rb.velocity.y, 0);
-            }
+            t.position += Time.deltaTime * shiftSpeed * vel;
         }
         else
         {
-            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            t.position += Time.deltaTime * speed * vel;
         }
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-            {
-                rb.velocity = new Vector3(rb.velocity.x, shiftSpeed, 0);
-            }
-            else
-            {
-                rb.velocity = new Vector3(rb.velocity.x, speed, 0);
-            }
-        }
-        else if (Input.GetKey(KeyCode.DownArrow))
-        {
-            if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
-            {
-                rb.velocity = new Vector3(rb.velocity.x, -shiftSpeed, 0);
-            }
-            else
-            {
-                rb.velocity = new Vector3(rb.velocity.x, -speed, 0);
-            }
-        }
-        else
-        {
-            rb.velocity = new Vector3(rb.velocity.x, 0, 0);
-        }
-
+        
         // Boundaries
 
         if (t.position.x > xBoundary)
         {
-            t.SetPositionAndRotation(new Vector3(xBoundary, t.position.y, t.position.z), t.rotation);
+            t.position = new Vector3(xBoundary, t.position.y, t.position.z);
         }
         if (t.position.x < -xBoundary)
         {
-            t.SetPositionAndRotation(new Vector3(-xBoundary, t.position.y, t.position.z), t.rotation);
+            t.position = new Vector3(-xBoundary, t.position.y, t.position.z);
         }
         if (t.position.y > yBoundary)
         {
-            t.SetPositionAndRotation(new Vector3(t.position.x, yBoundary, t.position.z), t.rotation);
+            t.position = new Vector3(t.position.x, yBoundary, t.position.z);
         }
         if (t.position.y < -yBoundary)
         {
-            t.SetPositionAndRotation(new Vector3(t.position.x, -yBoundary, t.position.z), t.rotation);
+            t.position = new Vector3(t.position.x, -yBoundary, t.position.z);
         }
 
         // Firing
@@ -120,16 +77,6 @@ public class Pilot2D : MonoBehaviour
             {
                 guns[i].GetComponent<Shooter>().enabled = false; // disables Shooter Script on guns
             }
-        }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag != "Friendly Projectile")
-        {
-            // player destroyed
-            // play destruction animation/create particle effect
-            GameObject.Destroy(this.gameObject);
         }
     }
 }
