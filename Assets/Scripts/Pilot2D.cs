@@ -6,29 +6,18 @@ public class Pilot2D : MonoBehaviour
 {
     public float speed = 1;
     public float shiftSpeed = 0.5f;
-    public Rigidbody rb;
-    public Transform t;
-
-    public List<Transform> sockets; 
-    public float shotDelay;
-    private float waitTime;
-    private int shotsFired;
+    private Rigidbody rb;
+    private Transform t;
+    public List<GameObject> guns; // manually add the guns added to the player to this list
 
     public float xBoundary = 5.5f;
     public float yBoundary = 4.3f;
 
-    public GameObject projectile;
-    //private List<GameObject> projectiles = new List<GameObject>();
-    //public int maxProjectiles;
-
-    private int index;
-    //private int index2 = 0;
-
     // Start is called before the first frame update
     void Start()
     {
-        waitTime = 0;
-        shotsFired = 0;
+        rb = this.GetComponent<Rigidbody>(); // Don't forget to add a Rigidbody component to the object!
+        t = this.GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -96,30 +85,20 @@ public class Pilot2D : MonoBehaviour
 
         // Firing
         
-        if (waitTime >= shotDelay && Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            index = shotsFired % sockets.Count;
-            /*
-            if (projectiles.Count < maxProjectiles)
+            for (int i = 0; i < guns.Count; i++)
             {
-                GameObject obj;
-                obj = (GameObject) Instantiate(projectile, sockets[index].position, sockets[index].rotation);
-                projectiles.Add(obj);
+                guns[i].GetComponent<Shooter>().enabled = true; // enables Shooter Script on guns
             }
-            else
-            {
-                
-                projectiles[index2].GetComponent<Transform>().SetPositionAndRotation(sockets[index].position, sockets[index].rotation);
-            }
-            */
-            Instantiate(projectile, sockets[index].position, sockets[index].rotation);
-            waitTime = 0;
-            shotsFired++;
-            //index2 = (index2 + 1) % maxProjectiles;
         }
-        
-        waitTime += Time.deltaTime;
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            for (int i = 0; i < guns.Count; i++)
+            {
+                guns[i].GetComponent<Shooter>().enabled = false; // disables Shooter Script on guns
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
