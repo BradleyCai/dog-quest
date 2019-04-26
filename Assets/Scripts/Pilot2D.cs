@@ -10,14 +10,20 @@ public class Pilot2D : MonoBehaviour
     private Transform t;
     public List<GameObject> guns; // manually add the guns added to the player to this list
 
-    public float xBoundary = 5.5f;
-    public float yBoundary = 4.3f;
+    private float xBoundary = 5.5f;
+    private float yBoundary = 4.3f;
+
+    private Vector2 playerSize;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>(); // Don't forget to add a Rigidbody component to the object!
         t = this.GetComponent<Transform>();
+        playerSize.x = GetComponent<BoxCollider>().size.x;
+        playerSize.y = GetComponent<BoxCollider>().size.y;
+        yBoundary = Camera.main.orthographicSize - playerSize.y / 2.0f;
+        xBoundary = Camera.main.orthographicSize * ((float)Screen.width / (float)Screen.height) - playerSize.x / 2.0f;
     }
 
     // Update is called once per frame
@@ -64,7 +70,8 @@ public class Pilot2D : MonoBehaviour
                 rb.velocity = new Vector3(rb.velocity.x, speed, 0);
             }
         }
-        else if (Input.GetKey(KeyCode.DownArrow)) {
+        else if (Input.GetKey(KeyCode.DownArrow))
+        {
             if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift))
             {
                 rb.velocity = new Vector3(rb.velocity.x, -shiftSpeed, 0);
@@ -74,14 +81,29 @@ public class Pilot2D : MonoBehaviour
                 rb.velocity = new Vector3(rb.velocity.x, -speed, 0);
             }
         }
-        else { rb.velocity = new Vector3(rb.velocity.x, 0, 0); }
+        else
+        {
+            rb.velocity = new Vector3(rb.velocity.x, 0, 0);
+        }
 
         // Boundaries
 
-        if (t.position.x > xBoundary) { t.SetPositionAndRotation(new Vector3(xBoundary, t.position.y, t.position.z), t.rotation); }
-        if (t.position.x < -xBoundary) { t.SetPositionAndRotation(new Vector3(-xBoundary, t.position.y, t.position.z), t.rotation); }
-        if (t.position.y > yBoundary) { t.SetPositionAndRotation(new Vector3(t.position.x, yBoundary, t.position.z), t.rotation); }
-        if (t.position.y < -yBoundary) { t.SetPositionAndRotation(new Vector3(t.position.x, -yBoundary, t.position.z), t.rotation); }
+        if (t.position.x > xBoundary)
+        {
+            t.SetPositionAndRotation(new Vector3(xBoundary, t.position.y, t.position.z), t.rotation);
+        }
+        if (t.position.x < -xBoundary)
+        {
+            t.SetPositionAndRotation(new Vector3(-xBoundary, t.position.y, t.position.z), t.rotation);
+        }
+        if (t.position.y > yBoundary)
+        {
+            t.SetPositionAndRotation(new Vector3(t.position.x, yBoundary, t.position.z), t.rotation);
+        }
+        if (t.position.y < -yBoundary)
+        {
+            t.SetPositionAndRotation(new Vector3(t.position.x, -yBoundary, t.position.z), t.rotation);
+        }
 
         // Firing
         
