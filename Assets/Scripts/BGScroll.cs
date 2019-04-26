@@ -19,7 +19,7 @@ public class BGScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        offset -= new Vector2(0, scrollSpeed);
+        offset -= new Vector2(0, scrollSpeed * Time.deltaTime);
         r.material.mainTextureOffset = offset;
     }
 }
