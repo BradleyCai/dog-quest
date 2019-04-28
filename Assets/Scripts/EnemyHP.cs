@@ -5,27 +5,21 @@ using UnityEngine.UI;
 
 public class EnemyHP : MonoBehaviour
 {
-    private Vector3 vel;
-    public float speed = 1;
-
-    private Transform t;
-
-    public int maxHealth;
-    public int health;
+    private int maxHealth;
+    private int health;
     public Slider bloodbar;
 
     // Start is called before the first frame update
     void Start()
     {
         maxHealth = 1000;
-        health = 1000;
-        t = this.GetComponent<Transform>();
+        health = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Damage
+        //Damage:in the well finished demo,there shoule be corresponded with the OnTriggerEnter()
         health--;
         bloodbar.value = (float)health / maxHealth;
 
@@ -33,11 +27,5 @@ public class EnemyHP : MonoBehaviour
         {
             GameObject.Destroy(this.gameObject);
         }
-
-        // Movement
-
-        vel = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0.0f);
-        
-        t.position += Time.deltaTime * speed * vel;
     }
 }
