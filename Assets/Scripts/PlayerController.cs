@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pilot2D : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private Vector3 vel;
     public float speed = 1;
