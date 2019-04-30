@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1524640491628221303}
   - component: {fileID: 3868518518497485760}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 501667583549664329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 2605814430792154908}
   m_RootOrder: 4
@@ -88,8 +88,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2605814430792154908}
-  - component: {fileID: 2605814430792154849}
   - component: {fileID: 6242383331864467361}
+  - component: {fileID: 1866129147904584366}
   m_Layer: 0
   m_Name: BasicPlayer
   m_TagString: Untagged
@@ -116,19 +116,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2605814430792154849
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2605814430792154848}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &6242383331864467361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,6 +133,19 @@ MonoBehaviour:
   guns:
   - {fileID: 1539804499045601200}
   - {fileID: 1539804499021553510}
+--- !u!65 &1866129147904584366
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605814430792154848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.53364307, y: 0.5400317, z: 1}
+  m_Center: {x: -0.000000029802322, y: 0.003194213, z: 0}
 --- !u!1 &3049147989570642592
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +175,7 @@ Transform:
   m_GameObject: {fileID: 3049147989570642592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.53343, y: 0.53343, z: 0.53343}
   m_Children: []
   m_Father: {fileID: 2605814430792154908}
   m_RootOrder: 1

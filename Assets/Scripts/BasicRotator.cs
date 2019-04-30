@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotator : MonoBehaviour
+public class BasicRotator : MonoBehaviour
 {
     public float angularSpeed;
 

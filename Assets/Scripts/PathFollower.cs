@@ -8,6 +8,7 @@ public class PathFollower : MonoBehaviour {
     public float duration; // how long the path follow should take in seconds
     public float angularSpeed;
     public bool loop = false;
+    public Vector3 offset;
 
     private Vector3[] positions; // array of positions from the line renderer
     private Vector3[] segVectors; // array of segments represented as vectors
@@ -25,7 +26,7 @@ public class PathFollower : MonoBehaviour {
         positions = new Vector3[path.positionCount];
         segVectors = new Vector3[path.positionCount];
         path.GetPositions(positions);
-        transform.position = positions[0];
+        transform.position = positions[0] + offset;
         segIndex = 0;
         time = 0;
         segTime = 0;
@@ -57,7 +58,7 @@ public class PathFollower : MonoBehaviour {
                 segIndex = 0;
                 time = 0;
                 segTime = 0;
-                transform.position = positions[0];
+                transform.position = positions[0] + offset;
                 segDuration = duration * (segVectors[segIndex].magnitude / pathLength);
             }
         }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyConductor : MonoBehaviour
+public class BasicEnemyConductor : MonoBehaviour
 {
     public GameObject[] enemies;
     public float spawnRate;
