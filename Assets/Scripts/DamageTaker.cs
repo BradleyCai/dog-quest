@@ -22,9 +22,8 @@ public class DamageTaker : MonoBehaviour
     {
         bloodbar.value = (float)health / maxHealth;
 
-        if (health <= 0)
-        {
-            GameObject.Destroy(this.gameObject);
+        if (health <= 0) {
+            GameObject.Destroy(this.transform.parent.gameObject);
         }
     }
 
@@ -32,7 +31,7 @@ public class DamageTaker : MonoBehaviour
     {
         if (other.tag == damageTypeTag) {
             health -= other.gameObject.GetComponent<BulletTrajectoryLinear>().damage;
-            GameObject.Destroy(other.gameObject.transform.parent);
+            GameObject.Destroy(other.gameObject);
         }
     }
 }
