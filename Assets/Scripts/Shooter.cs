@@ -12,7 +12,7 @@ public class Shooter : MonoBehaviour {
     [SerializeField] float attackRate = 0.5f;
     [SerializeField] float attackAngle = 0;
     [SerializeField] float speed = 1;
-    [SerializeField] float damage = 1f;
+    [SerializeField] int damage = 1;
 
 	// Start is called before the first frame update
     void Start() {
@@ -26,12 +26,13 @@ public class Shooter : MonoBehaviour {
 
         // can attack again, FIRE!!!!
     	if (attackCooldown <= 0) {
-    		attackCooldown = attackRate; // just fired, reset cooldown
+    		attackCooldown = 1 / attackRate; // just fired, reset cooldown
 
 			Quaternion rot = Quaternion.Euler(0, 0, attackAngle); // sets bullet rotation
-            GameObject bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot); 
+            GameObject bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot * transform.rotation); 
             bullet.layer = bulletLayer;  // sets gameObject to bullet
             bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
+            bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
     	}
     }
 }

@@ -6,6 +6,7 @@ using System;
 public class PathFollower : MonoBehaviour {
     public LineRenderer path; // path the follower should follow in the form of a LineRenderer GameObject
     public float duration; // how long the path follow should take in seconds
+    public bool loop = false;
 
     private Vector3[] positions; // array of positions from the line renderer
     private Vector3[] segVectors; // array of segments represented as vectors
@@ -49,6 +50,13 @@ public class PathFollower : MonoBehaviour {
                 segDuration = duration * (segVectors[segIndex].magnitude / pathLength);
                 time += segTime;
                 segTime = 0;
+            }
+            else if (loop) {
+                segIndex = 0;
+                time = 0;
+                segTime = 0;
+                transform.position = positions[0];
+                segDuration = duration * (segVectors[segIndex].magnitude / pathLength);
             }
         }
     }

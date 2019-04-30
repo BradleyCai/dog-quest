@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletTrajectoryLinear : MonoBehaviour {
 
 	public float speed; // this value is set in EnemyAttack, located in gun prefab
+	public int damage; // this value is set in EnemyAttack, located in gun prefab
 
     // Update is called once per frame
     void Update() {
