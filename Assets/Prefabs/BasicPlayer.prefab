@@ -157,8 +157,8 @@ GameObject:
   - component: {fileID: 6394667607136947077}
   - component: {fileID: 4870870322671998321}
   - component: {fileID: 5380843986997389227}
-  - component: {fileID: 7002423683451333300}
   - component: {fileID: 7700490654941414959}
+  - component: {fileID: 3676118417017838245}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -225,19 +225,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7002423683451333300
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3049147989570642592}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7700490654941414959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -253,6 +240,19 @@ MonoBehaviour:
   damageTypeTag: Enemy
   maxHealth: 10
   bloodbar: {fileID: 7838754909336141653}
+--- !u!135 &3676118417017838245
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3049147989570642592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &2605814431725101130
 PrefabInstance:
   m_ObjectHideFlags: 0

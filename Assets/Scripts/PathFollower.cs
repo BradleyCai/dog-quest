@@ -6,6 +6,7 @@ using System;
 public class PathFollower : MonoBehaviour {
     public LineRenderer path; // path the follower should follow in the form of a LineRenderer GameObject
     public float duration; // how long the path follow should take in seconds
+    public float angularSpeed;
     public bool loop = false;
 
     private Vector3[] positions; // array of positions from the line renderer
@@ -38,6 +39,7 @@ public class PathFollower : MonoBehaviour {
     }
 
     void Update() {
+        transform.Rotate(0, 0, angularSpeed);
 
         // travel each segment, updating the current segment as we go along
         if (segTime < segDuration) {
