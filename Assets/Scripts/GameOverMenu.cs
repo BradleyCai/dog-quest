@@ -46,6 +46,8 @@ public class GameOverMenu : MonoBehaviour
             canvas.enabled = true;
         }
 
+        // text color change 
+
         if (colorPhase1)
         {
             gameOverText.color = Color.Lerp(c1, c2, time1 / colorPeriod1);
@@ -100,6 +102,4 @@ public class GameOverMenu : MonoBehaviour
         this.gameObject.SetActive(false);
         SceneManager.LoadScene("TitleScreen");
     }
-
-
 }
