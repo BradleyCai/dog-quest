@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class TextColorFade : MonoBehaviour
+public class ButtonColorFade : MonoBehaviour
 {
-    private Text t;
+    private Button b;
 
     public List<Color> colors;
     private int colorsIndex;
@@ -19,8 +19,8 @@ public class TextColorFade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        t = this.GetComponent<Text>();
-        t.color = colors[0];
+        b = this.GetComponent<Button>();
+        b.image.color = colors[0];
         
         time = 0.0f;
 
@@ -56,11 +56,11 @@ public class TextColorFade : MonoBehaviour
 
         if (colorsIndex < colors.Count - 1)
         {
-            t.color = Color.Lerp(colors[colorsIndex], colors[colorsIndex + 1], time / cycles[cyclesIndex]);
+            b.image.color = Color.Lerp(colors[colorsIndex], colors[colorsIndex + 1], time / cycles[cyclesIndex]);
         }
         else
         {
-            t.color = Color.Lerp(colors[colorsIndex], colors[0], time / cycles[cyclesIndex]);
+            b.image.color = Color.Lerp(colors[colorsIndex], colors[0], time / cycles[cyclesIndex]);
         }
 
         // Updates Indeces
