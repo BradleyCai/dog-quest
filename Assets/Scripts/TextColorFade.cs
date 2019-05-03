@@ -7,46 +7,77 @@ public class TextColorFade : MonoBehaviour
 {
     private Text t;
 
-    public Color color1, color2;
+    public List<Color> colors;
+    private int colorsIndex;
 
-    private bool swap;
+    public List<float> cycles;
+    private int cyclesIndex;
 
     private float time;
-    public float cycle = 1;
 
     // Start is called before the first frame update
     void Start()
     {
         t = this.GetComponent<Text>();
-        t.color = color1;
+        t.color = colors[0];
 
         time = 0.0f;
 
-        swap = true;
+        colorsIndex = 0;
+
+        // The following code is for correcting mismatches between the number of cycles and colors
+
+        if (cycles.Count < colors.Count)
+        {
+            Debug.Log("Number of cycles and colors do not match");
+            int j = colors.Count - cycles.Count;
+            for (int i = 0; i < j; i++)
+            {
+                cycles.Add(1.0f);
+            }
+        }
+
+        if (colors.Count < cycles.Count)
+        {
+            Debug.Log("Number of cycles and colors do not match");
+            int j = cycles.Count - colors.Count;
+            for (int i = 0; i < j; i++)
+            {
+                colors.Add(Color.black);
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (swap)
+        // Interpolates Colors
+
+        if (colorsIndex < colors.Count - 1)
         {
-            t.color = Color.Lerp(color1, color2, time / cycle);
-            if (time >= cycle)
-            {
-                swap = false;
-                time = 0;
-            }
+            t.color = Color.Lerp(colors[colorsIndex], colors[colorsIndex + 1], time / cycles[cyclesIndex]);
         }
         else
         {
-            t.color = Color.Lerp(color2, color1, time / cycle);
-            if (time >= cycle)
-            {
-                swap = true;
-                time = 0;
-            }
+            t.color = Color.Lerp(colors[colorsIndex], colors[0], time / cycles[cyclesIndex]);
         }
-         
+
+        // Updates Indeces
+
+        if (time >= cycles[cyclesIndex])
+        {
+            colorsIndex++;
+            cyclesIndex++;
+            if (colorsIndex >= colors.Count)
+            {
+                colorsIndex = 0;
+                cyclesIndex = 0;
+            }
+            time = 0;
+        }
+
+        // Tracks time
+
         time += Time.deltaTime;
     }
 }
