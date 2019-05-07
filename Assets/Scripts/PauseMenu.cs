@@ -23,15 +23,11 @@ public class PauseMenu : MonoBehaviour
         {
             if (onOff)
             {
-                Time.timeScale = 1.0f;
-                canvas.enabled = false;
-                onOff = false;
+                Resume();
             }
             else
             {
-                Time.timeScale = 0.0f;
-                canvas.enabled = true;
-                onOff = true;
+                Pause();
             }
         }
     }
@@ -43,11 +39,16 @@ public class PauseMenu : MonoBehaviour
         onOff = false;
     }
 
+    public void Pause()
+    {
+        Time.timeScale = 0.0f;
+        canvas.enabled = true;
+        onOff = true;
+    }
+
     public void Reload() // reloads level
     {
-        Time.timeScale = 1.0f;
-        canvas.enabled = false;
-        onOff = false;
+        Resume();
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
