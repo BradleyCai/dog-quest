@@ -9,10 +9,15 @@ public class Shooter : MonoBehaviour {
     int bulletLayer; // stores which layer 'bullet' is in unity
     float attackCooldown;
 
+    /** basic linear attacks **/
     [SerializeField] float attackRate = 0.5f;
     [SerializeField] float angleOffset = 0;
     [SerializeField] float speed = 1;
     [SerializeField] int damage = 1;
+
+    /** homing bullets **/
+    [SerializeField] bool homing = false;
+    [SerializeField] float rotationSpeed = 0f;
 
 	// Start is called before the first frame update
     void Start() {
@@ -33,6 +38,10 @@ public class Shooter : MonoBehaviour {
             bullet.layer = bulletLayer;  // sets gameObject to bullet
             bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
             bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
-    	}
+    	
+            if (homing) {
+                bullet.GetComponent<BulletTrajectoryHoming>().rotationSpeed = rotationSpeed; // sets the roation sepped for <BulletTrajectoryHoming>
+            }
+        }
     }
 }
