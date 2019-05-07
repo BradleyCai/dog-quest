@@ -7,7 +7,8 @@ public class BGScroll : MonoBehaviour
     private Renderer r;
     private Vector2 offset;
 
-    public float scrollSpeed = 1.0f;
+    public float VertScrollSpeed = 1.0f;
+    public float HorizScrollSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class BGScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        offset -= new Vector2(0, scrollSpeed * Time.deltaTime);
+        offset -= new Vector2(HorizScrollSpeed * Time.deltaTime, VertScrollSpeed * Time.deltaTime);
         r.material.mainTextureOffset = offset;
     }
 }
