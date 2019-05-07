@@ -39,6 +39,7 @@ public class Shooter : MonoBehaviour {
             bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
             bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
     	
+            // if the bullet is homing, set "homing" effectiveness 
             if (homing) {
                 bullet.GetComponent<BulletTrajectoryHoming>().rotationSpeed = rotationSpeed; // sets the roation sepped for <BulletTrajectoryHoming>
             }
