@@ -43,12 +43,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 0.75
-  attackAngle: 0
+  angleOffset: 0
   speed: 4
   damage: 1
+  homing: 0
+  rotationSpeed: 0
 --- !u!1 &4725059802101131516
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,12 +94,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 0.75
-  attackAngle: 0
+  angleOffset: 0
   speed: 4
   damage: 1
+  homing: 0
+  rotationSpeed: 0
 --- !u!1 &4725059803221551162
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,12 +272,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 0.75
-  attackAngle: 0
+  angleOffset: 0
   speed: 4
   damage: 1
+  homing: 0
+  rotationSpeed: 0
 --- !u!1 &7816317719678300301
 GameObject:
   m_ObjectHideFlags: 0

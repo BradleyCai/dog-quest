@@ -22,7 +22,7 @@ public class BulletTrajectoryHoming : MonoBehaviour {
         	}
         }
 
-        // Player doesn't exist in this frame, move to next grame
+        // Player doesn't exist in this frame, move to next frame
         if (player == null) {
         	return;
         }

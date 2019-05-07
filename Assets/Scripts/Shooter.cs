@@ -27,7 +27,7 @@ public class Shooter : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {  
-        attackCooldown -= Time.deltaTime;        		
+        attackCooldown -= Time.deltaTime;   		
 
         // can attack again, FIRE!!!!
     	if (attackCooldown <= 0) {
@@ -43,6 +43,8 @@ public class Shooter : MonoBehaviour {
             if (homing) {
                 bullet.GetComponent<BulletTrajectoryHoming>().rotationSpeed = rotationSpeed; // sets the roation sepped for <BulletTrajectoryHoming>
             }
+
+            
         }
     }
 }
