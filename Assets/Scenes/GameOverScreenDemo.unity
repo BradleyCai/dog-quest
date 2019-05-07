@@ -314,7 +314,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180, y: 30}
+  m_AnchoredPosition: {x: 180, y: -90}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405744056
@@ -443,7 +443,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -180, y: 30}
+  m_AnchoredPosition: {x: -180, y: -90}
   m_SizeDelta: {x: 320, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &803308727
@@ -733,7 +733,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 145}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1183170202
@@ -844,7 +844,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1250004538}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 0}
@@ -895,14 +895,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1450020658}
   canvas: {fileID: 1250004541}
-  gameOverText: {fileID: 1657459057}
-  continueText: {fileID: 1183170202}
-  c1: {r: 1, g: 0, b: 0, a: 1}
-  c2: {r: 0.6698113, g: 0, b: 0, a: 1}
-  c3: {r: 0.9962779, g: 1, b: 0, a: 1}
-  c4: {r: 1, g: 0.44463068, b: 0, a: 1}
-  colorPeriod1: 2
-  colorPeriod2: 2
 --- !u!1 &1450020658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2605814430792154848, guid: bc8d1d3e62233e948adfcd37a6177f9d,
@@ -1106,7 +1098,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 240}
+  m_AnchoredPosition: {x: 0, y: 90}
   m_SizeDelta: {x: 473.7, y: 88.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1657459057

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TitleScreenMenu : MonoBehaviour
 {
+    public Canvas levelSelect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,29 +20,15 @@ public class TitleScreenMenu : MonoBehaviour
  
     }
 
-    public void GoToAutumn()
+    public void GameStart()
     {
-        //SceneManager.LoadScene("LevelAutumn");
+        
     }
 
-    public void GoToWinter()
+    public void LevelSelect()
     {
-        //SceneManager.LoadScene("LevelWinter");
-    }
-
-    public void GoToSpring()
-    {
-        //SceneManager.LoadScene("LevelSpring");
-    }
-
-    public void GoToSummer()
-    {
-        //SceneManager.LoadScene("LevelSummer");
-    }
-
-    public void GoToUnknown()
-    {
-        //SceneManager.LoadScene("LevelUnknown");
+        levelSelect.enabled = true;
+        this.GetComponent<Canvas>().enabled = false;
     }
 
 }
