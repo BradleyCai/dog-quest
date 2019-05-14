@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RemoveFromPlay : MonoBehaviour {
 
-    float offset = 2f;
+    float offset = 1.15f;
 
     // Update is called once per frame
     void Update() {
