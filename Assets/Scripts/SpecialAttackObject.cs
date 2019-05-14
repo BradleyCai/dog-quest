@@ -50,6 +50,7 @@ public class SpecialAttackObject : MonoBehaviour
         if (other.tag == "Enemy")
         {
             Destroy(other.gameObject);
+            Destroy(other.transform.parent.gameObject);
         }
     }
 }

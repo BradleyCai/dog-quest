@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Enemy Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 1298447916121604088, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
         type: 3}
@@ -70,6 +70,21 @@ PrefabInstance:
     - target: {fileID: 1298447916121604088, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013441732176730017, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+        type: 3}
+      propertyPath: targetTag
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013441732176730017, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+        type: 3}
+      propertyPath: speed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1013441732176730017, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+        type: 3}
+      propertyPath: damage
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

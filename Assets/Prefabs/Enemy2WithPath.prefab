@@ -146,6 +146,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   angularSpeed: 0.03
+--- !u!135 &748034455844707030
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3377740410011348162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.25
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &62873284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,24 +253,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7726148924220375629, guid: 188304df256255a46938716ddd286460,
+    - target: {fileID: 4725059803221551162, guid: 188304df256255a46938716ddd286460,
         type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8572781081593724367, guid: 188304df256255a46938716ddd286460,
         type: 3}
-    - target: {fileID: 965605095164013162, guid: 188304df256255a46938716ddd286460,
-        type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
-        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 4725059803221551163, guid: 188304df256255a46938716ddd286460,
         type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2899426992193088689, guid: 188304df256255a46938716ddd286460,
+    - target: {fileID: 4970335697593501103, guid: 188304df256255a46938716ddd286460,
+        type: 3}
+      propertyPath: damageTypeTag
+      value: Friendly Projectile
+      objectReference: {fileID: 0}
+    - target: {fileID: 7726148924220375629, guid: 188304df256255a46938716ddd286460,
         type: 3}
       propertyPath: bulletPrefab
       value: 
@@ -273,6 +289,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 965605095164013162, guid: 188304df256255a46938716ddd286460,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
+        type: 3}
+    - target: {fileID: 2899426992193088689, guid: 188304df256255a46938716ddd286460,
+        type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 188304df256255a46938716ddd286460, type: 3}
 --- !u!1 &3377740410011348162 stripped
