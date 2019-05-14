@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669290fd51d6db646a9e52b3920c683f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTypeTag: Player
+  damageTypeTag: Enemy
   maxHealth: 10
   bloodbar: {fileID: 7572676086292850902}
 --- !u!1 &8328859625534692100
@@ -208,6 +208,9 @@ MonoBehaviour:
   damage: 1
   homing: 1
   rotationSpeed: 60
+  laser: 0
+  lineRenderer: {fileID: 0}
+  laserFireRate: 2
 --- !u!1001 &7669128280320522955
 PrefabInstance:
   m_ObjectHideFlags: 0

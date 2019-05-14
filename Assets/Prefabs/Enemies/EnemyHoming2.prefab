@@ -51,6 +51,9 @@ MonoBehaviour:
   damage: 1
   homing: 1
   rotationSpeed: 45
+  laser: 0
+  lineRenderer: {fileID: 0}
+  laserFireRate: 2
 --- !u!1 &712534126831904961
 GameObject:
   m_ObjectHideFlags: 0
@@ -175,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669290fd51d6db646a9e52b3920c683f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTypeTag: Player
+  damageTypeTag: Enemy
   maxHealth: 10
   bloodbar: {fileID: 4506137443465020324}
 --- !u!1 &2596471787517898870
@@ -261,6 +264,9 @@ MonoBehaviour:
   damage: 1
   homing: 1
   rotationSpeed: 45
+  laser: 0
+  lineRenderer: {fileID: 0}
+  laserFireRate: 2
 --- !u!1 &5826341330612974174
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +318,9 @@ MonoBehaviour:
   damage: 1
   homing: 1
   rotationSpeed: 45
+  laser: 0
+  lineRenderer: {fileID: 0}
+  laserFireRate: 2
 --- !u!1001 &4463277717494518201
 PrefabInstance:
   m_ObjectHideFlags: 0
