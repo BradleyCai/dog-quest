@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5493503791512307800}
   m_Layer: 0
   m_Name: Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -88,7 +88,7 @@ BoxCollider:
   m_GameObject: {fileID: 1061112030704456904}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4777650330105665176}
   m_Layer: 0
   m_Name: Gun1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151,10 +151,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: 45
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &2545158947081333484
@@ -166,9 +166,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2545158947081333475}
+  - component: {fileID: 3794570474988900246}
   m_Layer: 0
-  m_Name: EnemyModel5
-  m_TagString: Untagged
+  m_Name: Enemy5
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,6 +197,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3794570474988900246
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2545158947081333484}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 1.5, z: 1}
+  m_Center: {x: 6, y: 2, z: 0}
 --- !u!1 &2956139431643146887
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +222,7 @@ GameObject:
   - component: {fileID: 7428633032848707651}
   m_Layer: 0
   m_Name: Gun2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -239,10 +253,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: 135
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &3251014353549520652
@@ -257,7 +271,7 @@ GameObject:
   - component: {fileID: 2018108719503902475}
   m_Layer: 0
   m_Name: Gun5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -288,10 +302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: 0
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &6305584098936884823
@@ -306,7 +320,7 @@ GameObject:
   - component: {fileID: 2599650781269016255}
   m_Layer: 0
   m_Name: Gun3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -337,10 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: -135
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &6657206173225641328
@@ -355,7 +369,7 @@ GameObject:
   - component: {fileID: 3214822979018720969}
   m_Layer: 0
   m_Name: Gun6
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,10 +400,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: 90
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &6975583495334464077
@@ -404,7 +418,7 @@ GameObject:
   - component: {fileID: 2895668215844176372}
   m_Layer: 0
   m_Name: Gun4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,10 +449,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: -45
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &9037490426909989390
@@ -453,7 +467,7 @@ GameObject:
   - component: {fileID: 5450026655862523126}
   m_Layer: 0
   m_Name: Gun8
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -484,10 +498,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: -90
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &9218259956238302037
@@ -502,7 +516,7 @@ GameObject:
   - component: {fileID: 7863507409747834761}
   m_Layer: 0
   m_Name: Gun7
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -533,9 +547,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
+  bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
   attackRate: 1
-  attackAngle: -180
+  angleOffset: 0
   speed: 2
   damage: 1

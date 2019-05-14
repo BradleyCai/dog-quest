@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 439081172931131385}
   m_Layer: 0
-  m_Name: EnemyModel4
-  m_TagString: Untagged
+  m_Name: Enemy4
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
     type: 3}
   attackRate: 1
-  attackAngle: 90
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &3169414107627417710
@@ -130,7 +130,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
     type: 3}
   attackRate: 1
-  attackAngle: 0
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &3169414108461543592
@@ -287,7 +287,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
     type: 3}
   attackRate: 1
-  attackAngle: -90
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!1 &8269798345430690359
@@ -336,6 +336,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
     type: 3}
   attackRate: 1
-  attackAngle: -180
+  angleOffset: 0
   speed: 2
   damage: 1
