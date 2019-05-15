@@ -34,7 +34,7 @@ public class SpecialAttackObject : MonoBehaviour
         else
         {
             circle.radius = 2 * Camera.main.orthographicSize * ((float)Screen.width / (float)Screen.height) * (time / duration);
-            obj.GetComponent<Transform>().localScale = new Vector3(2 * circle.radius, 2 * circle.radius, 0);
+            obj.GetComponent<Transform>().localScale = new Vector3(2 * circle.radius, 2 * circle.radius, 0.1f);
         }
 
         if (time >= duration)
