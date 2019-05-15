@@ -8,6 +8,7 @@ public class SpecialAttackObject : MonoBehaviour
     private GameObject obj;
 
     public bool custom; // this value allows us to use custom values for the radius if on, otherwise it uses the screen width
+    public bool projectilesOnly;
     public float radius;
     public float duration; // this is how long it takes for the circle to expand to the desired radius
     private float time;
@@ -47,7 +48,11 @@ public class SpecialAttackObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy")
+        if (other.tag == "Enemy Projectile")
+        { 
+            Destroy(other.gameObject);
+        }
+        if (other.tag == "Enemy" && !projectilesOnly)
         {
             Destroy(other.gameObject);
             Destroy(other.transform.parent.gameObject);
