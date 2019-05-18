@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  disperseSpeedMultiplier: 4
+  disperseSpeed: 5
   segRangeMin: 0.25
   segRangeMax: 2
 --- !u!135 &62404628
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  disperseSpeedMultiplier: 4
+  disperseSpeed: 5
   segRangeMin: 0.25
   segRangeMax: 2
 --- !u!135 &575742360
@@ -412,7 +412,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  disperseSpeedMultiplier: 4
+  disperseSpeed: 5
   segRangeMin: 0.25
   segRangeMax: 2
 --- !u!135 &799822437
@@ -537,7 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  disperseSpeedMultiplier: 4
+  disperseSpeed: 5
   segRangeMin: 0.25
   segRangeMax: 2
 --- !u!135 &1000828568
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  disperseSpeedMultiplier: 4
+  disperseSpeed: 5
   segRangeMin: 0.25
   segRangeMax: 2
 --- !u!135 &2056024786
@@ -941,6 +941,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  disperseSpeedMultiplier: 4
+  disperseSpeed: 5
   segRangeMin: 0.25
   segRangeMax: 2
