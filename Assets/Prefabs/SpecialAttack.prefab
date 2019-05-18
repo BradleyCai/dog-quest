@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 1024209304323887769}
   m_Layer: 0
   m_Name: SpecialAttack
-  m_TagString: Friendly Projectile
+  m_TagString: Special Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
