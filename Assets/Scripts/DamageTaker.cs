@@ -31,7 +31,7 @@ public class DamageTaker : MonoBehaviour
     {
         if (other.tag == damageTypeTag) {
             health -= other.gameObject.GetComponent<BulletTrajectoryLinear>().damage;
-            GameObject.Destroy(other.gameObject);
+            //GameObject.Destroy(other.gameObject);
         }
     }
 }

@@ -156,7 +156,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7835826783636854317, guid: ed717fd7da3ca8b45b5fe74d285dd9b4,
     type: 3}
   attackRate: 1
-  attackAngle: 0
+  angleOffset: 0
   speed: 2
   damage: 1
 --- !u!54 &8880171585037279386
@@ -198,8 +198,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8880171583428549039}
   m_Layer: 0
-  m_Name: EnemyModel1
-  m_TagString: Untagged
+  m_Name: Enemy1
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
