@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class RemoveFromPlay : MonoBehaviour {
 
+    float offset = 1.15f;
+
     // Update is called once per frame
     void Update() {
     	Vector3 pos = transform.position;
-
+        
         // outside y camera boundaries, remove from play
-        if (pos.y > Camera.main.orthographicSize || pos.y < -Camera.main.orthographicSize) {
+        if (pos.y > Camera.main.orthographicSize * offset || pos.y < -Camera.main.orthographicSize * offset) {
         	Destroy(gameObject);
         }
 
         // outside of x camera boundaries, remove from play
         float screenRatio = (float)Screen.width / (float)Screen.height;
         float widthOrtho = Camera.main.orthographicSize * screenRatio;
-        if (pos.x > widthOrtho || pos.x < -widthOrtho) {
+        if (pos.x > widthOrtho * offset || pos.x < -widthOrtho * offset) {
             Destroy(gameObject);
         }
     }
