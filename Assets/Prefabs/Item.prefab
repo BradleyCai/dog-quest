@@ -124,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: 0
+  random: 1
 --- !u!135 &5696653904910382030
 SphereCollider:
   m_ObjectHideFlags: 0

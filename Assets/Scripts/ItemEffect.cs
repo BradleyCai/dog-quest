@@ -7,6 +7,8 @@ public class ItemEffect : MonoBehaviour
     public enum Effect { Ammo, ShotSpeed, Damage, NULL};
 
     public Effect effect;
+    public bool random;
+    private int randomNum;
 
     private Renderer rend;
 
@@ -14,6 +16,27 @@ public class ItemEffect : MonoBehaviour
     void Start()
     {
         rend = GetComponentInChildren<Renderer>();
+
+        randomNum = Random.Range(1, 4);
+
+        if (random)
+        {
+            switch (randomNum)
+            {
+                case 1:
+                    effect = Effect.ShotSpeed;
+                    break;
+                case 2:
+                    effect = Effect.Damage;
+                    break;
+                case 3:
+                    effect = Effect.Ammo;
+                    break;
+                default:
+                    effect = Effect.NULL;
+                    break;
+            }
+        }
 
         switch(effect)
         {
