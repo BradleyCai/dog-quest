@@ -163,7 +163,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   disperseSpeedMultiplier: 4
-  timeSeg1: 2
+  segRangeMin: 0.25
+  segRangeMax: 2
 --- !u!135 &62404628
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -287,7 +288,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   disperseSpeedMultiplier: 4
-  timeSeg1: 2
+  segRangeMin: 0.25
+  segRangeMax: 2
 --- !u!135 &575742360
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -411,7 +413,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   disperseSpeedMultiplier: 4
-  timeSeg1: 2
+  segRangeMin: 0.25
+  segRangeMax: 2
 --- !u!135 &799822437
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -535,7 +538,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   disperseSpeedMultiplier: 4
-  timeSeg1: 2
+  segRangeMin: 0.25
+  segRangeMax: 2
 --- !u!135 &1000828568
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -741,7 +745,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   disperseSpeedMultiplier: 4
-  timeSeg1: 2
+  segRangeMin: 0.25
+  segRangeMax: 2
 --- !u!135 &2056024786
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -937,4 +942,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   disperseSpeedMultiplier: 4
-  timeSeg1: 2
+  segRangeMin: 0.25
+  segRangeMax: 2

@@ -9,14 +9,14 @@ public class ItemMovement : MonoBehaviour
     public float speed;
     public float disperseSpeedMultiplier;
 
-    private float timeSeg; // this variable tells the script how long to "disperse" the item
+    private float timeSeg1; // this variable tells the script how long to "disperse" the item
+    private float timeSeg2; // this variable tells the script how long to accelerate to top speed after the direction changes
     public float segRangeMin, segRangeMax;
     private float time;
 
     private bool yOnly;
 
     private Vector3 initialVelocity;
-    private Vector3 finalVelocity;
 
     // Start is called before the first frame update
     void Start()
@@ -24,30 +24,30 @@ public class ItemMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         yOnly = false;
         time = 0;
-        timeSeg = Random.Range(segRangeMin, segRangeMax);
+        timeSeg1 = Random.Range(segRangeMin, segRangeMax);
+        timeSeg2 = Random.Range(1.0f, 2.0f);
 
-        rb.velocity = initialVelocity = new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), 0).normalized * speed * disperseSpeedMultiplier;
-        finalVelocity = initialVelocity / disperseSpeedMultiplier;
+        rb.velocity = initialVelocity = new Vector3(Random.Range(-1.0f, 1.0f), Random.Range(-1.0f, 1.0f), 0).normalized * speed * disperseSpeedMultiplier;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (time < timeSeg)
+        if (time < timeSeg1 && !yOnly)
         {
-            rb.velocity = Vector3.Lerp(initialVelocity, finalVelocity, time / timeSeg);
+            rb.velocity = Vector3.Lerp(initialVelocity, Vector3.zero, time / timeSeg1);
         }
-        else if (time >= timeSeg && !yOnly)
+        else if (time >= timeSeg1 && !yOnly)
         {
-            ChangeVelocity();
+            yOnly = true;
+            time = 0;
+        }
+
+        if (yOnly && time <= timeSeg2)
+        {
+            rb.velocity = Vector3.Lerp(Vector3.zero, Vector3.down * speed, time / timeSeg2);
         }
 
         time += Time.deltaTime;
-    }
-
-    void ChangeVelocity()
-    {
-        rb.velocity = new Vector3(0, -speed, 0);
-        yOnly = true;
     }
 }
