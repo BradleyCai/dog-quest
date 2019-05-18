@@ -31,7 +31,9 @@ public class DamageTaker : MonoBehaviour
     {
         if (other.tag == damageTypeTag) {
             health -= other.gameObject.GetComponent<BulletTrajectoryLinear>().damage;
-            GameObject.Destroy(other.gameObject);
+            if (other.gameObject.name != "LaserBullet(Clone)") {
+                GameObject.Destroy(other.gameObject);
+            }
         }
     }
 }
