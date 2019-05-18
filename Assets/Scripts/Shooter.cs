@@ -9,10 +9,10 @@ public class Shooter : MonoBehaviour {
     int bulletLayer; // stores which layer 'bullet' is in unity
     float attackCooldown;
 
-    [SerializeField] float attackRate = 0.5f;
+    public float attackRate = 0.5f;
     [SerializeField] float angleOffset = 0;
-    [SerializeField] float speed = 1;
-    [SerializeField] int damage = 1;
+    public float speed = 1;
+    public int damage = 1;
 
 	// Start is called before the first frame update
     void Start() {

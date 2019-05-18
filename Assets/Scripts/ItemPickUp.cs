@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
+    private List<GameObject> list;
+
+    [SerializeField] int damageBoost = 1;
+    [SerializeField] int ammoBoost = 1;
+    [SerializeField] float attackRateBoost = 1;
+    [SerializeField] float attackSpeedBoost = 1;
     // Start is called before the first frame update
     void Start()
     {
-        
+        list = GetComponentInParent<PlayerController>().guns;
     }
 
     // Update is called once per frame
@@ -24,17 +30,36 @@ public class ItemPickUp : MonoBehaviour
             switch(other.gameObject.GetComponent<ItemEffect>().effect)
             {
                 case ItemEffect.Effect.Ammo:
-                    // Effect
+                    if (GetComponent<SpecialAttack>().ammo < GetComponent<SpecialAttack>().ammoMax)
+                    {
+                        GetComponent<SpecialAttack>().ammo += ammoBoost;
+                        if (GetComponent<SpecialAttack>().ammo > GetComponent<SpecialAttack>().ammoMax)
+                        {
+                            GetComponent<SpecialAttack>().ammo = GetComponent<SpecialAttack>().ammoMax;
+                        }
+                    }
+
+                    
                     Destroy(other.gameObject);
+
                     Debug.Log("Item Consumed: Ammo");
                     break;
                 case ItemEffect.Effect.ShotSpeed:
-                    // Effect
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        list[i].GetComponent<Shooter>().attackRate += attackRateBoost;
+                        list[i].GetComponent<Shooter>().speed += attackSpeedBoost;
+                    }
+
                     Destroy(other.gameObject);
+
                     Debug.Log("Item Consumed: ShotSpeed");
                     break;
                 case ItemEffect.Effect.Damage:
-                    // Effect
+                    for (int i = 0; i < list.Count; i++)
+                    {
+                        list[i].GetComponent<Shooter>().damage += damageBoost;
+                    }
                     Destroy(other.gameObject);
                     Debug.Log("Item Consumed: Damage");
                     break;
