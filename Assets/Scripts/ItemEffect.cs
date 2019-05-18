@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemEffect : MonoBehaviour
 {
-    public enum Effect { Ammo, ShotSpeed, Homing, NULL};
+    public enum Effect { Ammo, ShotSpeed, Damage, NULL};
 
     public Effect effect;
 
@@ -15,27 +15,22 @@ public class ItemEffect : MonoBehaviour
     {
         rend = GetComponentInChildren<Renderer>();
 
-        if (effect == Effect.NULL)
-        {
-            effect = Effect.Ammo;
-        }
-
         switch(effect)
         {
             case Effect.Ammo:
-                rend.material.color = Color.red;
-                break;
-            case Effect.ShotSpeed:
                 rend.material.color = Color.blue;
                 break;
-            case Effect.Homing:
+            case Effect.ShotSpeed:
                 rend.material.color = Color.green;
                 break;
+            case Effect.Damage:
+                rend.material.color = Color.red;
+                break;
             case Effect.NULL:
-                rend.material.color = Color.clear;
+                rend.material.color = Color.grey;
                 break;
             default:
-                rend.material.color = Color.white;
+                rend.material.color = Color.grey;
                 break;
         }
     }

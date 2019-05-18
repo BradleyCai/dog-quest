@@ -33,10 +33,10 @@ public class ItemPickUp : MonoBehaviour
                     Destroy(other.gameObject);
                     Debug.Log("Item Consumed: ShotSpeed");
                     break;
-                case ItemEffect.Effect.Homing:
+                case ItemEffect.Effect.Damage:
                     // Effect
                     Destroy(other.gameObject);
-                    Debug.Log("Item Consumed: Homing");
+                    Debug.Log("Item Consumed: Damage");
                     break;
                 case ItemEffect.Effect.NULL:
                     Destroy(other.gameObject);
