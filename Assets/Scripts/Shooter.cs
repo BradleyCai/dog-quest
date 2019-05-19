@@ -10,12 +10,13 @@ public class Shooter : MonoBehaviour {
     float attackCooldown;
 
 
+
     /** basic linear attacks **/
     [Header("Basic Bullet (default)")]
-    [SerializeField] float attackRate = 0.5f;
+    public float attackRate = 0.5f;
     [SerializeField] float angleOffset = 0;
-    [SerializeField] float speed = 1;
-    [SerializeField] int damage = 1;
+    public float speed = 1;
+    public int damage = 1;
     GameObject bullet;
 
     [Header("Homing Bullets")]

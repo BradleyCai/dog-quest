@@ -16,7 +16,7 @@ public class SpecialAttackObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        circle = this.gameObject.GetComponent<SphereCollider>();
+        circle = this.gameObject.GetComponentInParent<SphereCollider>();
         circle.radius = 0.0001f;
 
         obj = GameObject.Find("SpecialAttackSphere");
@@ -30,12 +30,12 @@ public class SpecialAttackObject : MonoBehaviour
         if (custom)
         {
             circle.radius = radius * (time / duration);
-            obj.GetComponent<Transform>().localScale = new Vector3 (2 * circle.radius, 2 * circle.radius, 0);
+            obj.GetComponentInParent<Transform>().localScale = new Vector3 (2 * circle.radius, 2 * circle.radius, 0);
         }
         else
         {
-            circle.radius = 2 * Camera.main.orthographicSize * ((float)Screen.width / (float)Screen.height) * (time / duration);
-            obj.GetComponent<Transform>().localScale = new Vector3(2 * circle.radius, 2 * circle.radius, 0.1f);
+            circle.radius = 4 * Camera.main.orthographicSize * ((float)Screen.width / (float)Screen.height) * (time / duration);
+            obj.GetComponentInParent<Transform>().localScale = new Vector3(2 * circle.radius, 2 * circle.radius, 0.1f);
         }
 
         if (time >= duration)
