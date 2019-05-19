@@ -9,6 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 499a1ad7333a66e41adb08c57c2da4a5
   - enabled: 1
-    path: Assets/Scenes/PauseMenuDemo.unity
-    guid: 28f7cce9efad20d4b9fc9051ee484d1b
+
+    path: Assets/Scenes/GameOverScreenDemo.unity
+    guid: 2d8be76657ac9604fbee0d24e0df6b2e
   m_configObjects: {}
