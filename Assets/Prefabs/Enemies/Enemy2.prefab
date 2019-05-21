@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4725059803221551166}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 220}
 --- !u!114 &7726148924220375629
 MonoBehaviour:
@@ -51,6 +51,10 @@ MonoBehaviour:
   damage: 1
   homing: 0
   rotationSpeed: 0
+  laser: 0
+  homingLaser: 0
+  laserFireTime: 2
+  laserOffTime: 2
 --- !u!1 &4725059802101131516
 GameObject:
   m_ObjectHideFlags: 0
@@ -80,7 +84,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4725059803221551166}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 140}
 --- !u!114 &965605095164013162
 MonoBehaviour:
@@ -102,6 +106,10 @@ MonoBehaviour:
   damage: 1
   homing: 0
   rotationSpeed: 0
+  laser: 0
+  homingLaser: 0
+  laserFireTime: 2
+  laserOffTime: 2
 --- !u!1 &4725059803221551162
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +125,7 @@ GameObject:
   - component: {fileID: 222861703533917354}
   - component: {fileID: 4970335697593501103}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,11 +142,12 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8572781081593724364}
   - {fileID: 4725059802101131517}
   - {fileID: 5353158186809136767}
   - {fileID: 1777501601851454116}
   m_Father: {fileID: 7816317719678300300}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4725059803221551161
 MeshFilter:
@@ -258,7 +267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4725059803221551166}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &2899426992193088689
 MonoBehaviour:
@@ -280,6 +289,10 @@ MonoBehaviour:
   damage: 1
   homing: 0
   rotationSpeed: 0
+  laser: 0
+  homingLaser: 0
+  laserFireTime: 2
+  laserOffTime: 2
 --- !u!1 &7816317719678300301
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +320,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8572781081593724364}
   - {fileID: 4725059803221551166}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -317,7 +329,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7816317719678300300}
+    m_TransformParent: {fileID: 4725059803221551166}
     m_Modifications:
     - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}

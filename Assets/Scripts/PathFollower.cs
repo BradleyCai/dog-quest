@@ -18,6 +18,14 @@ public class PathFollower : MonoBehaviour {
     private float segTime; // how long the follower has been traveling this segment
     private float pathLength; // total length of the path
 
+    void resetFollower() {
+        segIndex = 0;
+        time = 0;
+        segTime = 0;
+        transform.position = positions[0] + offset + path.transform.position;
+        segDuration = duration * (segVectors[segIndex].magnitude / pathLength);
+    }
+
     void Start() {
         if (path.positionCount < 2) {
             return;
@@ -26,17 +34,13 @@ public class PathFollower : MonoBehaviour {
         positions = new Vector3[path.positionCount];
         segVectors = new Vector3[path.positionCount];
         path.GetPositions(positions);
-        transform.position = positions[0] + offset;
-        segIndex = 0;
-        time = 0;
-        segTime = 0;
-        pathLength = 0;
 
         for (int i = 0; i < segVectors.Length - 1; i++) {
             segVectors[i] = positions[i + 1] - positions[i];
             pathLength += segVectors[i].magnitude;
         }
-        segDuration = duration * (segVectors[0].magnitude / pathLength);
+
+        resetFollower();
     }
 
     void Update() {
@@ -55,11 +59,7 @@ public class PathFollower : MonoBehaviour {
                 segTime = 0;
             }
             else if (loop) {
-                segIndex = 0;
-                time = 0;
-                segTime = 0;
-                transform.position = positions[0] + offset;
-                segDuration = duration * (segVectors[segIndex].magnitude / pathLength);
+                resetFollower();
             }
         }
     }

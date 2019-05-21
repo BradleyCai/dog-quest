@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
         // Firing
         
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Time.timeScale != 0.0f)
         {
             for (int i = 0; i < guns.Count; i++)
             {
