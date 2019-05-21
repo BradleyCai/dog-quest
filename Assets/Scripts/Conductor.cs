@@ -8,7 +8,7 @@ public class Conductor : MonoBehaviour
     [System.Serializable] public struct Actor {
         public GameObject gameObject;
         public Vector3 position;
-        public float time;
+        public float delay;
     }
     public Actor[] actors;
     private int currActor;
@@ -32,18 +32,20 @@ public class Conductor : MonoBehaviour
                 time = 0;
             }
             else {
-                this.gameObject.SetActive(true);
+                Destroy(this.gameObject);
             }
         }
-        else if (actors[currActor].time == -1) {
-            if (currActor > 0 && !actors[currActor - 1].gameObject.activeInHierarchy) {
-                Instantiate(actors[currActor].gameObject, actors[currActor].position, Quaternion.identity);
-                currActor += 1;
+        else if (actors[currActor].delay == -1) {
+            if (currActor > 0 && actors[currActor - 1].gameObject == null) {
+                actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position, Quaternion.identity);
+                currActor++;
+                time = 0;
             }
         }
-        else if (time > actors[currActor].time) {
-            Instantiate(actors[currActor].gameObject, actors[currActor].position, Quaternion.identity);
-            currActor += 1;
+        else if (time > actors[currActor].delay) {
+            time = 0;
+            actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position, Quaternion.identity);
+            currActor++;
         }
     }
 }
