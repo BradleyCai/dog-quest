@@ -43,10 +43,12 @@ public class AutumnBoss : MonoBehaviour
         
         if (t.position.x >= xBoundary || t.position.x <= -xBoundary)
         {
+            t.position = new Vector3(xDirection * xBoundary, t.position.y, 0);
             xDirection *= -1;
         }
         if (t.position.y >= yBoundary || t.position.y <= -yBoundary)
         {
+            t.position = new Vector3(t.position.x, yDirection * yBoundary, 0);
             yDirection *= -1;
         }
     }

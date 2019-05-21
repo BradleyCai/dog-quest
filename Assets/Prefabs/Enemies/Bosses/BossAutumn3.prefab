@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1226681979}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -143,12 +143,17 @@ PrefabInstance:
     - target: {fileID: 4725059803221551162, guid: 188304df256255a46938716ddd286460,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 7816317719678300301, guid: 188304df256255a46938716ddd286460,
         type: 3}
       propertyPath: m_Name
       value: BossAutumn3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816317719678300301, guid: 188304df256255a46938716ddd286460,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 7816317719678300300, guid: 188304df256255a46938716ddd286460,
         type: 3}
@@ -218,7 +223,7 @@ PrefabInstance:
     - target: {fileID: 8572781081593724367, guid: 188304df256255a46938716ddd286460,
         type: 3}
       propertyPath: m_TagString
-      value: Enemy
+      value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 8572781081593724367, guid: 188304df256255a46938716ddd286460,
         type: 3}
@@ -250,10 +255,25 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1777501601851454117, guid: 188304df256255a46938716ddd286460,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 4725059802101131516, guid: 188304df256255a46938716ddd286460,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 4725059803221551160, guid: 188304df256255a46938716ddd286460,
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7362622573586830965, guid: 188304df256255a46938716ddd286460,
+        type: 3}
+      propertyPath: m_TagString
+      value: Boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 188304df256255a46938716ddd286460, type: 3}
