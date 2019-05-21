@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 9168214836296778509}
   m_Layer: 0
   m_Name: PlayerBullet
-  m_TagString: Player
+  m_TagString: Friendly Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,6 +95,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   damage: 0
+  targetTag: Enemy
 --- !u!114 &4660064373603466222
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -542,9 +542,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53d6b4ceb3a7d9544b65c435ae95f54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetWidth: 960
-  targetHeight: 960
-  pixelsPerUnit: 30
 --- !u!1 &1220765759
 GameObject:
   m_ObjectHideFlags: 0
@@ -718,10 +715,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2605814430792154850, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+    - target: {fileID: 7838754907932723181, guid: bc8d1d3e62233e948adfcd37a6177f9d,
         type: 3}
-      propertyPath: guns.Array.size
-      value: 2
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838754907932723181, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 501667583549664329, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: m_Name
+      value: PlayerSprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 1524640491628221303, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1539804499021553509, guid: bc8d1d3e62233e948adfcd37a6177f9d,
         type: 3}
@@ -738,35 +750,20 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7838754907932723181, guid: bc8d1d3e62233e948adfcd37a6177f9d,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7838754907932723181, guid: bc8d1d3e62233e948adfcd37a6177f9d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7700490654941414959, guid: bc8d1d3e62233e948adfcd37a6177f9d,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2605814430792154850, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7144825640217756472, guid: bc8d1d3e62233e948adfcd37a6177f9d,
         type: 3}
       propertyPath: m_RootOrder
       value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1524640491628221303, guid: bc8d1d3e62233e948adfcd37a6177f9d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 501667583549664329, guid: bc8d1d3e62233e948adfcd37a6177f9d,
-        type: 3}
-      propertyPath: m_Name
-      value: PlayerSprite
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -937,6 +934,11 @@ PrefabInstance:
         type: 3}
       propertyPath: angularSpeed
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 460259380423580128, guid: 6690e09983f70a04c91c0d8ec650d63c,
+        type: 3}
+      propertyPath: damageTypeTag
+      value: Friendly Projectile
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6690e09983f70a04c91c0d8ec650d63c, type: 3}
