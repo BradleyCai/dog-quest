@@ -9,6 +9,8 @@ TagManager:
   - Enemy Projectile
   - Friendly Projectile
   - Item
+  - Special Attack
+  - Boss
   layers:
   - Default
   - TransparentFX
