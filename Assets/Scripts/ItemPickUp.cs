@@ -7,6 +7,7 @@ public class ItemPickUp : MonoBehaviour
     private List<GameObject> list;
 
     [SerializeField] int damageBoost = 1;
+    [SerializeField] int healthBoost = 1;
     [SerializeField] int ammoBoost = 1;
     [SerializeField] float attackRateBoost = 1;
     [SerializeField] float attackSpeedBoost = 1;
@@ -44,16 +45,18 @@ public class ItemPickUp : MonoBehaviour
 
                     Debug.Log("Item Consumed: Ammo");
                     break;
-                case ItemEffect.Effect.ShotSpeed:
-                    for (int i = 0; i < list.Count; i++)
-                    {
-                        list[i].GetComponent<Shooter>().attackRate += attackRateBoost;
-                        list[i].GetComponent<Shooter>().speed += attackSpeedBoost;
-                    }
+                case ItemEffect.Effect.Health:
+                    // for (int i = 0; i < list.Count; i++)
+                    // {
+                        // list[i].GetComponent<Shooter>().attackRate += attackRateBoost;
+                        // list[i].GetComponent<Shooter>().speed += attackSpeedBoost;
+                    // }
+
+                    this.BroadcastMessage("increaseHealth", healthBoost);
 
                     Destroy(other.gameObject);
 
-                    Debug.Log("Item Consumed: ShotSpeed");
+                    Debug.Log("Item Consumed: Health");
                     break;
                 case ItemEffect.Effect.Damage:
                     for (int i = 0; i < list.Count; i++)

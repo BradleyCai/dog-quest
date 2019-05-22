@@ -32,7 +32,13 @@ public class Conductor : MonoBehaviour
                 time = 0;
             }
             else {
-                Destroy(this.gameObject);
+                bool cleared = true;
+                foreach (Actor item in actors) {
+                    if (item.gameObject != null)
+                        cleared = false;
+                }
+                if (cleared)
+                    Destroy(this.gameObject);
             }
         }
         else if (actors[currActor].delay == -1) {

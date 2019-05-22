@@ -8,8 +8,7 @@ public class DamageTaker : MonoBehaviour
     public string damageTypeTag;
     public int maxHealth = 10;
     public Slider bloodbar;
-
-    private int health;
+    public int health;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +24,13 @@ public class DamageTaker : MonoBehaviour
         if (health <= 0) {
             GameObject.Destroy(this.transform.parent.gameObject);
         }
+    }
+
+    void increaseHealth(int amount) {
+        if (amount + health > maxHealth)
+            health = maxHealth;
+        else
+            health += amount;
     }
 
     void OnTriggerEnter(Collider other)

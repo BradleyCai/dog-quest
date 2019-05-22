@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemEffect : MonoBehaviour
 {
-    public enum Effect { Ammo, ShotSpeed, Damage, NULL};
+    public enum Effect {Ammo, Health, Damage, NULL};
 
     public Effect effect;
     public bool random;
@@ -24,7 +24,7 @@ public class ItemEffect : MonoBehaviour
             switch (randomNum)
             {
                 case 1:
-                    effect = Effect.ShotSpeed;
+                    effect = Effect.Health;
                     break;
                 case 2:
                     effect = Effect.Damage;
@@ -43,7 +43,7 @@ public class ItemEffect : MonoBehaviour
             case Effect.Ammo:
                 rend.material.color = Color.blue;
                 break;
-            case Effect.ShotSpeed:
+            case Effect.Health:
                 rend.material.color = Color.green;
                 break;
             case Effect.Damage:
