@@ -8,47 +8,42 @@ public class Conductor : MonoBehaviour
     [System.Serializable] public struct Actor {
         public GameObject gameObject;
         public Vector3 position;
-        public float delay;
+        public float spawnDelay;
+        public bool waitOnPrev;
     }
     public Actor[] actors;
     private int currActor;
     private float time;
 
-    // Start is called before the first frame update
     void Start()
     {
         currActor = 0;
         time = 0;
     }
 
-    // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
 
         if (currActor >= actors.Length) {
-            if (loop) {
+            bool cleared = true;
+            foreach (Actor actor in actors) {
+                if (actor.gameObject != null)
+                    cleared = false;
+            }
+
+            if (cleared) {
+                Destroy(this.gameObject);
+            }
+            else if (loop) {
                 currActor = 0;
                 time = 0;
             }
-            else {
-                bool cleared = true;
-                foreach (Actor item in actors) {
-                    if (item.gameObject != null)
-                        cleared = false;
-                }
-                if (cleared)
-                    Destroy(this.gameObject);
-            }
         }
-        else if (actors[currActor].delay == -1) {
-            if (currActor > 0 && actors[currActor - 1].gameObject == null) {
-                actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position, Quaternion.identity);
-                currActor++;
-                time = 0;
-            }
-        }
-        else if (time > actors[currActor].delay) {
+        else if (time > actors[currActor].spawnDelay) {
+            if (actors[currActor].waitOnPrev && (currActor == 0 || actors[currActor - 1].gameObject != null))
+                return;
+
             time = 0;
             actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position, Quaternion.identity);
             currActor++;
