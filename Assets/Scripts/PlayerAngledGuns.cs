@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerAngledGuns : MonoBehaviour
+public class AngledGuns : MonoBehaviour
 {
     public List<GameObject> guns;
 
@@ -27,7 +27,7 @@ public class PlayerAngledGuns : MonoBehaviour
                 guns[i].GetComponent<Shooter>().enabled = true;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.Space))
+        else
         {
             for (int i = 0; i < guns.Count; i++)
             {

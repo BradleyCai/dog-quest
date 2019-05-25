@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 5696182338256188853}
   - component: {fileID: 9168214836296778509}
   m_Layer: 11
-  m_Name: HomingBullet
+  m_Name: PlayerHomingBullet
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   damage: 0
-  targetTag: Player
+  targetTag: Enemy
 --- !u!114 &7616793256540569092
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1886711689448d74e9061e748ff4d852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Player
+  targetTag: Enemy
   rotationSpeed: 0
 --- !u!114 &4660064373603466222
 MonoBehaviour:

@@ -94,6 +94,8 @@ GameObject:
   - component: {fileID: 4458956405390620309}
   - component: {fileID: 2824561538859014257}
   - component: {fileID: 6601995148109419616}
+  - component: {fileID: 7672267020126486095}
+  - component: {fileID: 3909847735051981428}
   m_Layer: 0
   m_Name: BasicPlayerwPowerUps
   m_TagString: Player
@@ -197,10 +199,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c226955ffaafc64bb35bd9210ca71e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  specialAttack: {fileID: 8979652407585172252}
-  angledGuns: {fileID: 0}
-  homingGuns: {fileID: 2745851742111120172}
-  shield: {fileID: 6601995148109419616}
   p: 0
 --- !u!114 &6601995148109419616
 MonoBehaviour:
@@ -214,6 +212,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31811ee4bd75933419548c705c2d8afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7672267020126486095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605814430792154848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fecca3d8167ee042ba3fe21caed78c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns:
+  - {fileID: 8684103214142828566}
+  - {fileID: 6093275328119715233}
+--- !u!114 &3909847735051981428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605814430792154848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babf398155d25de48911a366a6c7209d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guns:
+  - {fileID: 2745851742111120175}
 --- !u!1 &3049147989570642592
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +436,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bulletPrefab
       value: 
-      objectReference: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
+      objectReference: {fileID: 7835826783636854317, guid: b14f42316b6d1b14c8233f88c0ea6715,
         type: 3}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
@@ -438,24 +465,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce3441ba52b2c14b80067f25ffcbbb3, type: 3}
+--- !u!1 &2745851742111120175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1687992239093798101}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2745851742111120173 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
     type: 3}
   m_PrefabInstance: {fileID: 1687992239093798101}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2745851742111120172 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1687992239093798101}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df56259bc651bc64f88aa7859b94bd36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2605814431725101130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -715,6 +736,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AngledGunR
       objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: angleOffset
@@ -732,6 +758,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce3441ba52b2c14b80067f25ffcbbb3, type: 3}
+--- !u!1 &8684103214142828566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 5328861990140600300}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8684103214142828564 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
@@ -805,6 +837,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: AngledGunL
       objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: angleOffset
@@ -822,6 +859,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ce3441ba52b2c14b80067f25ffcbbb3, type: 3}
+--- !u!1 &6093275328119715233 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+    type: 3}
+  m_PrefabInstance: {fileID: 7347732482963069531}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6093275328119715235 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
