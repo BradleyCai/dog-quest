@@ -7,7 +7,8 @@ public class BulletTrajectoryLinear : MonoBehaviour {
 	public float speed; // this value is set in Shooter, located in gun prefab
 	public int damage;  // this value is set in Shooter, located in gun prefab
 
-    public string targetTag;
+    public string[] targetTags;
+    private bool tagMatch = false;
 
     // Update is called once per frame
     void Update() {
@@ -20,7 +21,15 @@ public class BulletTrajectoryLinear : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == targetTag)
+        for (int i = 0; i < targetTags.Length; i++)
+        {
+            if (other.tag == targetTags[i])
+            {
+                tagMatch = true;
+            }
+        }
+
+        if (tagMatch)
         {
             Destroy(this.gameObject);
         }

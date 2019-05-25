@@ -95,7 +95,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   damage: 0
-  targetTag: Enemy
+  targetTags:
+  - Enemy
+  - Boss
 --- !u!114 &4660064373603466222
 MonoBehaviour:
   m_ObjectHideFlags: 0
