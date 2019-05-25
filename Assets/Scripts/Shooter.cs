@@ -14,7 +14,7 @@ public class Shooter : MonoBehaviour {
     /** basic linear attacks **/
     [Header("Basic Bullet (default)")]
     public float attackRate = 0.5f;
-    [SerializeField] float angleOffset = 0;
+    public float angleOffset = 0;
     public float speed = 1;
     public int damage = 1;
     GameObject bullet;

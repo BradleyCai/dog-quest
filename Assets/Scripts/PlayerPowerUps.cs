@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PlayerPowerUps : MonoBehaviour
 {
-    public MonoBehaviour specialAttack;
-    public MonoBehaviour angledGuns;
-    public MonoBehaviour homingGuns;
-    public MonoBehaviour shield;
+    private MonoBehaviour specialAttack;
+    private MonoBehaviour angledGuns;
+    private MonoBehaviour homingGuns;
+    private MonoBehaviour shield;
 
     public enum Power { L1, L2, L3, L4, L5 };
     public Power p;
@@ -15,7 +15,10 @@ public class PlayerPowerUps : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        specialAttack = GetComponent<SpecialAttack>();
+        angledGuns = GetComponent<AngledGuns>();
+        homingGuns = GetComponent<AngledGuns>();
+        shield = GetComponent<PlayerShield>();
     }
 
     // Update is called once per frame
