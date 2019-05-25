@@ -19,6 +19,11 @@ public class PlayerPowerUps : MonoBehaviour
         angledGuns = GetComponent<PlayerAngledGuns>();
         homingGuns = GetComponent<PlayerHomingGuns>();
         shield = GetComponent<PlayerShield>();
+
+        specialAttack.enabled = false;
+        angledGuns.enabled = false;
+        homingGuns.enabled = false;
+        shield.enabled = false;
     }
 
     // Update is called once per frame

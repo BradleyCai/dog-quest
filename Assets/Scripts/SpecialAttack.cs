@@ -25,7 +25,7 @@ public class SpecialAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Z)) && ready)
+        if ((Input.GetKeyDown(KeyCode.X) || Input.GetKeyDown(KeyCode.Z)) && ready && this.isActiveAndEnabled)
         {
             Instantiate(obj, this.GetComponent<Transform>());
             ready = false;
