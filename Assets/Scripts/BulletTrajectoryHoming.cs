@@ -6,7 +6,7 @@ public class BulletTrajectoryHoming : MonoBehaviour {
 
 	Transform origin;
     Transform target;
-    public string targetTag;
+    public string[] targetTags;
 
 	[HideInInspector] public float rotationSpeed; // this value is set in Shooter, located in gun prefab
 
@@ -43,24 +43,26 @@ public class BulletTrajectoryHoming : MonoBehaviour {
     {
         GameObject[] objects;
         GameObject targetObject;
-
-
-        objects = GameObject.FindGameObjectsWithTag(targetTag);
-        targetObject = null;
         float distance = Mathf.Infinity;
         float objectDistance = 0.0f;
+        targetObject = null;
 
-        for (int i = 0; i < objects.Length; i++)
+
+        for (int j = 0; j < targetTags.Length; j++)
         {
-            objectDistance = (objects[i].transform.position - origin.position).sqrMagnitude;
+            objects = GameObject.FindGameObjectsWithTag(targetTags[j]);
 
-            if (objectDistance < distance)
+            for (int i = 0; i < objects.Length; i++)
             {
-                distance = objectDistance;
-                targetObject = objects[i];
+                objectDistance = (objects[i].transform.position - origin.position).sqrMagnitude;
+
+                if (objectDistance < distance)
+                {
+                    distance = objectDistance;
+                    targetObject = objects[i];
+                }
             }
         }
-
         return targetObject;
     }
 }
