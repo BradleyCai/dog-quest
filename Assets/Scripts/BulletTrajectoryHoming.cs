@@ -12,6 +12,7 @@ public class BulletTrajectoryHoming : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        origin = this.gameObject.transform;
     	
     	// Player just spawned, find player ship
         if (target == null) {

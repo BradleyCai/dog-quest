@@ -16,8 +16,8 @@ public class PlayerPowerUps : MonoBehaviour
     void Start()
     {
         specialAttack = GetComponent<SpecialAttack>();
-        angledGuns = GetComponent<AngledGuns>();
-        homingGuns = GetComponent<AngledGuns>();
+        angledGuns = GetComponent<PlayerAngledGuns>();
+        homingGuns = GetComponent<PlayerHomingGuns>();
         shield = GetComponent<PlayerShield>();
     }
 
