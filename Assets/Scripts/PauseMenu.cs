@@ -8,12 +8,17 @@ public class PauseMenu : MonoBehaviour
 {
     public Canvas canvas;
     public bool onOff; // I just wanted a value that is separate from canvas.enabled in case that causes problems
-    
+    public bool isMute;
+    private GameObject obj;
+    private Button btn;
     // Start is called before the first frame update
     void Start()
     {
         canvas.enabled = false;
         onOff = false;
+        isMute = false;
+        obj = GameObject.Find("Sound Button");
+        btn = obj.GetComponent<Button>();
     }
 
     // Update is called once per frame
@@ -21,6 +26,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            SoundControl();
             if (onOff)
             {
                 Resume();
@@ -56,5 +62,19 @@ public class PauseMenu : MonoBehaviour
     public void Return() // returns to title screen
     {
         SceneManager.LoadScene("TitleScreen"); // this means scene 0 needs to be the title screen
+    }
+
+    public void SoundControl()
+    {
+        if (isMute)
+        {
+            isMute = true;
+            btn.image.sprite = Resources.Load<Sprite>("Art Materials/UI/sound_bt");
+        }
+        else
+        {
+            isMute = false;
+            btn.image.sprite = Resources.Load<Sprite>("Art Materials/UI/mutesound_bt");
+        }
     }
 }
