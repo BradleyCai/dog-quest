@@ -11,8 +11,8 @@ public class SpecialAttack : MonoBehaviour
     public float delay;
     private float time;
 
-    public float ammoMax;
-    [HideInInspector] public float ammo;
+    public int ammoMax;
+    [HideInInspector] public int ammo;
 
     // Start is called before the first frame update
     void Start()

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     private float xBoundary;
     private float yBoundary;
+    private float xOffset;
 
     private Vector2 playerSize;
 
@@ -24,7 +25,8 @@ public class PlayerController : MonoBehaviour
         playerSize.x = GetComponent<BoxCollider>().size.x;
         playerSize.y = GetComponent<BoxCollider>().size.y;
         yBoundary = Camera.main.orthographicSize - playerSize.y / 2.0f;
-        xBoundary = Camera.main.orthographicSize * ((float)Screen.width / (float)Screen.height) - playerSize.x / 2.0f;
+        xBoundary = Camera.main.orthographicSize - playerSize.x / 2.0f;
+        xOffset = Camera.main.orthographicSize / 3.0f;
     }
 
     // Update is called once per frame
@@ -45,13 +47,13 @@ public class PlayerController : MonoBehaviour
         
         // Boundaries
 
-        if (t.position.x > xBoundary)
+        if (t.position.x > xBoundary - xOffset)
         {
-            t.position = new Vector3(xBoundary, t.position.y, t.position.z);
+            t.position = new Vector3(xBoundary - xOffset, t.position.y, t.position.z);
         }
-        if (t.position.x < -xBoundary)
+        if (t.position.x < -xBoundary - xOffset)
         {
-            t.position = new Vector3(-xBoundary, t.position.y, t.position.z);
+            t.position = new Vector3(-xBoundary - xOffset, t.position.y, t.position.z);
         }
         if (t.position.y > yBoundary)
         {
