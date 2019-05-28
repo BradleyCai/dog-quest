@@ -22,10 +22,24 @@ public class Shooter : MonoBehaviour {
     /** Homing Bullet Attack: fires towards target
       * homing: selection on unity menu to set enemy to fire bullets to track target
       * rotationSpeed: how much the bullet can rotate towards the target
+      *
+      * Default: rotationSpeed equals 0, so no homing ability
     **/
     [Header("Homing Bullets")]
     [SerializeField] bool homingBullet = false;
     [SerializeField] float rotationSpeed = 0f;
+
+    /** Random Angle Attack: define angles in unity and fire a bullet with the random angle
+      * randomAngle: bullet fires with a random angle
+      * startAngle: start range for possible angles
+      * stopAngle: end range for possible angles
+      *
+      * Default: startAngle and stopAngle equal 0 so they shoot straight
+    **/
+    [Header("Random Angle")]
+    [SerializeField] bool randomAngle = false;
+    [SerializeField] float startAngle = 0f;
+    [SerializeField] float stopAngle = 0f;
 
     /** Laser Attack: fires a laser linearly 
       * laser: selection on unity menu to set enemy to fire lasters
@@ -67,7 +81,7 @@ public class Shooter : MonoBehaviour {
     // Update is called once per frame
     void Update() {  
         /** Default attack **/
-        if (!laser && !homingLaser) {
+        if (!laser && !homingLaser && !randomAngle) {
             attackCooldown -= Time.deltaTime;
             // can attack again, FIRE!!!!
             if (attackCooldown <= 0) {
@@ -77,6 +91,15 @@ public class Shooter : MonoBehaviour {
                 if (homingBullet) {
                     bullet.GetComponent<BulletTrajectoryHoming>().rotationSpeed = rotationSpeed; // sets the roation sepped for <BulletTrajectoryHoming>
                 }
+            }
+        }
+
+        /* fires bullets at random angles set by user */
+        if (randomAngle) {
+            attackCooldown -= Time.deltaTime;
+            // can attack again, FIRE!!!!
+            if (attackCooldown <= 0) {
+                RandomAngleAttack();
             }
         }
 
@@ -157,6 +180,17 @@ public class Shooter : MonoBehaviour {
         bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
         bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
         laserCooldown -= Time.deltaTime;
+    }
+
+    void RandomAngleAttack() {
+        attackCooldown = 1 / attackRate; // just fired, reset cooldown
+
+        angleOffset = Random.Range(startAngle, stopAngle);
+        rot = Quaternion.Euler(0, 0, angleOffset); // sets bullet rotation
+        bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot * transform.rotation); 
+        bullet.layer = bulletLayer;  // sets gameObject to bullet
+        bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
+        bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
     }
 
     void BasicAttack() {
