@@ -11,6 +11,7 @@ TagManager:
   - Item
   - Special Attack
   - Boss
+  - StatusUI
   layers:
   - Default
   - TransparentFX

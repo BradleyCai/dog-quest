@@ -385,7 +385,7 @@ GameObject:
   - component: {fileID: 1417818814711289480}
   m_Layer: 5
   m_Name: StatusUICanvas
-  m_TagString: Untagged
+  m_TagString: StatusUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -496,6 +496,7 @@ MonoBehaviour:
   specialAttackAmmo: {fileID: 1417818815199466566}
   damageBoost: {fileID: 1417818815005268710}
   score: {fileID: 1417818815599569437}
+  scoreCount: 0
 --- !u!1 &1417818815005268708
 GameObject:
   m_ObjectHideFlags: 0

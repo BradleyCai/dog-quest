@@ -13,7 +13,7 @@ public class StatusUI : MonoBehaviour
 
     private int specialAttackAmmoCount;
     private int damageBoostCount;
-    private int scoreCount;
+    [HideInInspector] public int scoreCount;
 
     // Start is called before the first frame update
     void Start()
