@@ -24,7 +24,7 @@ public class Shooter : MonoBehaviour {
       * rotationSpeed: how much the bullet can rotate towards the target
     **/
     [Header("Homing Bullets")]
-    [SerializeField] bool homing = false;
+    [SerializeField] bool homingBullet = false;
     [SerializeField] float rotationSpeed = 0f;
 
     /** Laser Attack: fires a laser linearly 
@@ -74,7 +74,7 @@ public class Shooter : MonoBehaviour {
                 BasicAttack();
                 
                 // if the bullet is homing, set "homing" effectiveness 
-                if (homing) {
+                if (homingBullet) {
                     bullet.GetComponent<BulletTrajectoryHoming>().rotationSpeed = rotationSpeed; // sets the roation sepped for <BulletTrajectoryHoming>
                 }
             }
@@ -112,7 +112,7 @@ public class Shooter : MonoBehaviour {
     }
 
     void FireHomingLaser() {
-        if (!fired) {
+        if (!fired) { // sets homing direction once
             // Player just spawned, find player ship
             if (player == null) {
                 /*** change the string for player gameobject if player gets renamed ***/
@@ -148,7 +148,6 @@ public class Shooter : MonoBehaviour {
         bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
         bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
         laserHomingCooldown -= Time.deltaTime;
-        
     }
 
     void FireLaser() {
