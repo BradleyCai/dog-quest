@@ -28,7 +28,10 @@ public class StatusUI : MonoBehaviour
     {
         specialAttackAmmoCount = player.GetComponent<SpecialAttack>().ammo;
         damageBoostCount = player.GetComponent<ItemPickUp>().damageBoostCount;
-        //scoreCount = ???
+        if (scoreCount < 0)
+        {
+            scoreCount = 0;
+        }
 
         specialAttackAmmo.text = "x " + specialAttackAmmoCount;
         damageBoost.text = "x " + damageBoostCount;
