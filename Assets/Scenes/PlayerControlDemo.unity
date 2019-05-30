@@ -261,5 +261,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6242383331864467361, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: fireClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0fe265bd702142e4a9ac290cc17828d2, type: 3}
+    - target: {fileID: 7838754907932723181, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7838754907932723181, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc8d1d3e62233e948adfcd37a6177f9d, type: 3}

@@ -37,11 +37,8 @@ public class SpecialAttack : MonoBehaviour
         {
             ready = true;
         }
-
         
-
         time += Time.deltaTime;
-
         
     }
 }

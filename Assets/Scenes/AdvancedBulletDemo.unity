@@ -528,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTypeTag: Player
-  maxHealth: 10
+  maxHealth: 500
   bloodbar: {fileID: 167869791}
 --- !u!4 &1524640492139563497
 Transform:
@@ -600,11 +600,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1524640492139563497}
     m_Modifications:
-    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_Name
-      value: GunR
-      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -675,6 +670,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_Name
+      value: GunR
+      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_Enabled
@@ -699,11 +699,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1524640492139563497}
     m_Modifications:
-    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_Name
-      value: GunL
-      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -773,6 +768,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_Name
+      value: GunL
       objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
