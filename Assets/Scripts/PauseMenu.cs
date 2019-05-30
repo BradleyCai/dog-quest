@@ -8,17 +8,34 @@ public class PauseMenu : MonoBehaviour
 {
     public Canvas canvas;
     public bool onOff; // I just wanted a value that is separate from canvas.enabled in case that causes problems
-    public bool isMute;
-    private GameObject obj;
-    private Button btn;
+    private bool isMute;
+    public Button soundBt;
+    public Sprite mute_img;
+    public Sprite sound_img;
+    public AudioSource background_music; //change this public interface into a suitable music
+    Button btn;
+
     // Start is called before the first frame update
     void Start()
     {
         canvas.enabled = false;
         onOff = false;
         isMute = false;
-        obj = GameObject.Find("Sound Button");
-        btn = obj.GetComponent<Button>();
+        btn = soundBt.GetComponent<Button>();
+        btn.onClick.AddListener(delegate ()
+        {
+            isMute = !isMute;
+            MuteControl(isMute);
+            if (isMute)
+            {
+                btn.GetComponent<Image>().sprite = mute_img;
+            }
+            else
+            {
+                btn.GetComponent<Image>().sprite = sound_img;
+            }
+        }); //change the image when click on the sound button
+        
     }
 
     // Update is called once per frame
@@ -26,7 +43,6 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SoundControl();
             if (onOff)
             {
                 Resume();
@@ -64,17 +80,15 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("TitleScreen"); // this means scene 0 needs to be the title screen
     }
 
-    public void SoundControl()
+    private void MuteControl(bool flag)//control on and off of BGM
     {
-        if (isMute)
+        if (!isMute)
         {
-            isMute = true;
-            btn.image.sprite = Resources.Load<Sprite>("Art Materials/UI/sound_bt");
+            background_music.Play();
         }
         else
         {
-            isMute = false;
-            btn.image.sprite = Resources.Load<Sprite>("Art Materials/UI/mutesound_bt");
+            background_music.Pause();
         }
     }
 }
