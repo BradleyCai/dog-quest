@@ -25,7 +25,6 @@ public class ItemPickUp : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("other: " + other.name);
         if (other.tag == "Item")
         {
             switch(other.gameObject.GetComponent<ItemEffect>().effect)

@@ -8,26 +8,26 @@ public class Shooter : MonoBehaviour {
 
     int bulletLayer; // stores which layer 'bullet' is in unity
     float attackCooldown;
-
-
+    private Vector3 prevPos;
 
     /** basic linear attacks **/
     [Header("Basic Bullet (default)")]
     public float attackRate = 0.5f;
-    [SerializeField] float angleOffset = 0;
+    public float angleOffset = 0;
     public float speed = 1;
     public int damage = 1;
+    public float delay = 0;
     GameObject bullet;
 
     [Header("Homing Bullets")]
-    [SerializeField] bool homing = false;
-    [SerializeField] float rotationSpeed = 0f;
+    public bool homing = false;
+    public float rotationSpeed = 0f;
 
     [Header("Laser")]
-    [SerializeField] bool laser = false;
-    [SerializeField] bool homingLaser = false;
-    [SerializeField] float laserFireTime = 2f;
-    [SerializeField] float laserOffTime = 2f;
+    public bool laser = false;
+    public bool homingLaser = false;
+    public float laserFireTime = 2f;
+    public float laserOffTime = 2f;
     bool fired = false;
     float laserCooldown;
 
@@ -36,9 +36,9 @@ public class Shooter : MonoBehaviour {
     Transform player;
 
     // Start is called before the first frame update
-    void Start() {
+    public void Start() {
         bulletLayer = gameObject.layer; // layer in unity should be set to bullet
-        attackCooldown = 0f;
+        attackCooldown = delay;
         laserCooldown = laserFireTime;
     }
 
@@ -76,6 +76,8 @@ public class Shooter : MonoBehaviour {
             }
 
         }   
+
+        prevPos = transform.position;
     }
 
     void FireHomingLaser() {
@@ -129,12 +131,11 @@ public class Shooter : MonoBehaviour {
     }
 
     void BasicAttack() {
+        rot = Quaternion.Euler(0, 0, angleOffset) * transform.rotation; // sets bullet rotation
         attackCooldown = 1 / attackRate; // just fired, reset cooldown
-
-        rot = Quaternion.Euler(0, 0, angleOffset); // sets bullet rotation
-        bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot * transform.rotation); 
+        bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot);
         bullet.layer = bulletLayer;  // sets gameObject to bullet
-        bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
+        bullet.GetComponent<BulletTrajectoryLinear>().speed = speed;// + projMag; // sets speed for <BulletTrajectoryLinear>
         bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
     }
 }

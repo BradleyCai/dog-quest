@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501667583549664329}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.018, y: 0.503, z: 1}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalPosition: {x: -0.122, y: 0.272, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4153379386447177494}
   m_RootOrder: 0
@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dab54cf8de8a16a4397ce7903b05b3f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
-  shiftSpeed: 4
+  speed: 6
+  shiftSpeed: 2
   guns:
   - {fileID: 1539804499045601200}
   - {fileID: 1539804499021553510}
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageBoost: 1
+  healthBoost: 1
   ammoBoost: 1
   attackRateBoost: 1
   attackSpeedBoost: 1
@@ -207,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3049147989570642592}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.003, y: 0.024, z: 0}
+  m_LocalPosition: {x: -0.101, y: -0.206, z: 0}
   m_LocalScale: {x: 0.53343, y: 0.53343, z: 0.53343}
   m_Children: []
   m_Father: {fileID: 4153379386447177494}
@@ -273,6 +274,7 @@ MonoBehaviour:
   damageTypeTag: Enemy Projectile
   maxHealth: 10
   bloodbar: {fileID: 7838754909336141653}
+  health: 0
 --- !u!135 &3676118417017838245
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -284,7 +286,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.13
+  m_Radius: 0.19
   m_Center: {x: -0.03590749, y: 0.8940961, z: 0}
 --- !u!114 &6319431396061597853
 MonoBehaviour:
@@ -422,6 +424,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2605814430792154908}
     m_Modifications:
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_Name
+      value: GunR
+      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -477,11 +484,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_Name
-      value: GunR
-      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_Enabled
@@ -518,6 +520,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2605814430792154908}
     m_Modifications:
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_Name
+      value: GunL
+      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -572,11 +579,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_Name
-      value: GunL
       objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
