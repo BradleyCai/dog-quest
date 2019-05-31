@@ -49,6 +49,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 2
   damage: 1
+  delay: 0
   homing: 0
   rotationSpeed: 0
   laser: 0
@@ -200,6 +201,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 2
   damage: 1
+  delay: 0
   homing: 0
   rotationSpeed: 0
   laser: 0
@@ -287,6 +289,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 2
   damage: 1
+  delay: 0
   homing: 0
   rotationSpeed: 0
   laser: 0
@@ -342,6 +345,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 2
   damage: 1
+  delay: 0
   homing: 0
   rotationSpeed: 0
   laser: 0
@@ -523,6 +527,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 2
   damage: 1
+  delay: 0
   homing: 0
   rotationSpeed: 0
   laser: 0
@@ -687,10 +692,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 7833437241249038952}
-  duration: 4
-  angularSpeed: 0
-  loop: 0
+  speed: 1
+  delay: 0
   offset: {x: 0, y: 0, z: 0}
+  loop: 0
+  loopIndex: 1
 --- !u!1001 &5559738087036502827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -698,11 +704,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8735849929701898839}
     m_Modifications:
-    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 250437201432652942, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -807,6 +808,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}

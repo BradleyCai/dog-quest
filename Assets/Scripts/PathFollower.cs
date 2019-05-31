@@ -21,6 +21,7 @@ public class PathFollower : MonoBehaviour {
 
         for (int i = 0; i < positions.Length; i++) {
             positions[i] += path.transform.position + offset;
+            positions[i].z = 0;
         }
 
         transform.position = positions[0];

@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7718733781389948555}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7865129110805450997
 SpriteRenderer:
@@ -107,8 +107,8 @@ Transform:
   m_LocalPosition: {x: 0.417, y: -0.546, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7718733781389948555}
-  m_RootOrder: 3
+  m_Father: {fileID: 938597286370793668}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 220}
 --- !u!114 &4734532404824071416
 MonoBehaviour:
@@ -128,6 +128,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 4
   damage: 1
+  delay: 0
   homing: 1
   rotationSpeed: 40
   laser: 0
@@ -144,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5113160268439187001}
   m_Layer: 0
-  m_Name: BlueEnemy
+  m_Name: HomingEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,6 +167,65 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5189177105781258438
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 938597286370793668}
+  - component: {fileID: 6273915750524706597}
+  m_Layer: 0
+  m_Name: Guns
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &938597286370793668
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5189177105781258438}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7718733782609983048}
+  - {fileID: 6973409111925508298}
+  - {fileID: 3613663625052056593}
+  m_Father: {fileID: 7718733781389948555}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6273915750524706597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5189177105781258438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f635a8acf6522484593a5ca20328b9c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
+    type: 3}
+  attackRate: 0.75
+  angleOffset: 0
+  speed: 4
+  damage: 1
+  delay: 0
+  homing: 1
+  rotationSpeed: 40
+  laser: 0
+  homingLaser: 0
+  laserFireTime: 2
+  laserOffTime: 2
 --- !u!1 &5521960257617332416
 GameObject:
   m_ObjectHideFlags: 0
@@ -194,8 +254,8 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.528, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7718733781389948555}
-  m_RootOrder: 2
+  m_Father: {fileID: 938597286370793668}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &193776679899394564
 MonoBehaviour:
@@ -215,6 +275,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 4
   damage: 1
+  delay: 0
   homing: 1
   rotationSpeed: 40
   laser: 0
@@ -256,9 +317,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6661977618484847481}
-  - {fileID: 7718733782609983048}
-  - {fileID: 6973409111925508298}
-  - {fileID: 3613663625052056593}
+  - {fileID: 938597286370793668}
   - {fileID: 2603483486556722074}
   m_Father: {fileID: 5113160268439187001}
   m_RootOrder: 0
@@ -381,10 +440,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   path: {fileID: 9119929886721019572}
-  duration: 5
-  angularSpeed: 0
-  loop: 0
+  speed: 1
+  delay: 0
   offset: {x: 0, y: 0, z: 0}
+  loop: 1
+  loopIndex: 1
 --- !u!1 &7718733782609983049
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,8 +473,8 @@ Transform:
   m_LocalPosition: {x: -0.382, y: -0.578, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 7718733781389948555}
-  m_RootOrder: 1
+  m_Father: {fileID: 938597286370793668}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 140}
 --- !u!114 &2876180676162335967
 MonoBehaviour:
@@ -434,6 +494,7 @@ MonoBehaviour:
   angleOffset: 0
   speed: 4
   damage: 1
+  delay: 0
   homing: 1
   rotationSpeed: 40
   laser: 0
@@ -509,14 +570,16 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: -0.8219293, y: 5.6321645, z: 0}
-  - {x: 0.95313454, y: 4.351932, z: 0}
-  - {x: -0.7929873, y: 3.5635328, z: 0}
-  - {x: 0.96127605, y: 2.7562068, z: 0}
-  - {x: -0.9275222, y: 1.9074156, z: 0}
-  - {x: 1.052762, y: 1.1857767, z: 0}
-  - {x: 1.0225573, y: 1.1857767, z: 0}
-  - {x: -0.9186516, y: 0.44798702, z: 0}
+  - {x: 0.018302917, y: 5.5699673, z: 0}
+  - {x: -0.6366716, y: 4.406706, z: 0}
+  - {x: 0.6964356, y: 3.9367871, z: 0}
+  - {x: -0.71661216, y: 3.4922333, z: 0}
+  - {x: 0.61705077, y: 3.079433, z: 0}
+  - {x: -0.70073515, y: 3.047679, z: 0}
+  - {x: 0.60117376, y: 3.4604793, z: 0}
+  - {x: -0.66898125, y: 3.9050333, z: 0}
+  - {x: 0.56941986, y: 4.3972187, z: 0}
+  - {x: 0.5535429, y: 4.3972187, z: 0}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -579,11 +642,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7718733781389948555}
     m_Modifications:
-    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 250437201432652942, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -688,6 +746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}

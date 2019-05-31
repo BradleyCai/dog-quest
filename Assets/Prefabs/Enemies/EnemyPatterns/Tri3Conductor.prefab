@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2416048162949230640
+--- !u!1 &7984476001317242111
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2416048162949230642}
-  - component: {fileID: 2416048162949230643}
+  - component: {fileID: 7984476001317242109}
+  - component: {fileID: 7984476001317242108}
   m_Layer: 0
-  m_Name: SetOf3Conductor
+  m_Name: Tri3Conductor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2416048162949230642
+--- !u!4 &7984476001317242109
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2416048162949230640}
+  m_GameObject: {fileID: 7984476001317242111}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2416048162949230643
+--- !u!114 &7984476001317242108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2416048162949230640}
+  m_GameObject: {fileID: 7984476001317242111}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6434835bbe4ade94a92cb6368b944edb, type: 3}
@@ -45,15 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loop: 0
   actors:
-  - gameObject: {fileID: 6111404962753536740, guid: 19c9bb818d046074b93f108a03a2cc98,
+  - gameObject: {fileID: 3351870583390162083, guid: 6690e09983f70a04c91c0d8ec650d63c,
       type: 3}
     position: {x: -2.5, y: 0, z: 0}
-    delay: 0
-  - gameObject: {fileID: 6111404962753536740, guid: 19c9bb818d046074b93f108a03a2cc98,
+    spawnDelay: 0
+    waitOnPrev: 0
+  - gameObject: {fileID: 3351870583390162083, guid: 6690e09983f70a04c91c0d8ec650d63c,
       type: 3}
     position: {x: 0, y: 1, z: 0}
-    delay: 0
-  - gameObject: {fileID: 6111404962753536740, guid: 19c9bb818d046074b93f108a03a2cc98,
+    spawnDelay: 0
+    waitOnPrev: 0
+  - gameObject: {fileID: 3351870583390162083, guid: 6690e09983f70a04c91c0d8ec650d63c,
       type: 3}
     position: {x: 2.5, y: 0, z: 0}
-    delay: 0
+    spawnDelay: 0
+    waitOnPrev: 0
