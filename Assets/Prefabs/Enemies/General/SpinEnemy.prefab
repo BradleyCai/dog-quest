@@ -45,17 +45,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 7
-  angleOffset: 0
   speed: 2
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 7
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &3964386716194343303
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +134,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.53, y: 0.52}
+  m_Size: {x: 0.54, y: 0.53}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -196,18 +201,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f635a8acf6522484593a5ca20328b9c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
-  attackRate: 4
-  angleOffset: 0
+  bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
+    type: 3}
   speed: 2
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 4
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &6111404962753536740
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,17 +296,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 7
-  angleOffset: 0
   speed: 2
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 7
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &6810704714864624668
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,17 +357,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 7
-  angleOffset: 0
   speed: 2
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 7
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &7833437241249038953
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,17 +544,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 7
-  angleOffset: 0
   speed: 2
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 7
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &8735849929701898835
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +730,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8735849929701898839}
     m_Modifications:
+    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBar
+      objectReference: {fileID: 0}
     - target: {fileID: 250437201432652942, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -808,11 +839,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}

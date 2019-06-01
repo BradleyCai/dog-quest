@@ -179,6 +179,7 @@ MonoBehaviour:
   ammoBoost: 1
   attackRateBoost: 1
   attackSpeedBoost: 1
+  damageBoostCount: 0
 --- !u!1 &3049147989570642592
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +193,6 @@ GameObject:
   - component: {fileID: 5380843986997389227}
   - component: {fileID: 7700490654941414959}
   - component: {fileID: 3676118417017838245}
-  - component: {fileID: 6319431396061597853}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Player
@@ -288,22 +288,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.19
   m_Center: {x: -0.03590749, y: 0.8940961, z: 0}
---- !u!114 &6319431396061597853
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3049147989570642592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b109126c79124149a4200897aadda2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obj: {fileID: 1024209304323887783, guid: 7bd92a775f0ec914184e3fa446b70e0b, type: 3}
-  delay: 3
-  ammoMax: 5
-  ammo: 0
 --- !u!1 &4216666292336735869
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,16 +408,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2605814430792154908}
     m_Modifications:
-    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_Name
-      value: GunR
-      objectReference: {fileID: 0}
-    - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -484,6 +458,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_Name
+      value: GunR
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_Enabled
@@ -520,16 +504,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2605814430792154908}
     m_Modifications:
-    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_Name
-      value: GunL
-      objectReference: {fileID: 0}
-    - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.2
-      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -580,6 +554,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408826, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_Name
+      value: GunL
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564540160876408824, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3564540160876408825, guid: 5ce3441ba52b2c14b80067f25ffcbbb3,
         type: 3}
       propertyPath: m_Enabled
@@ -616,11 +600,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4153379386447177494}
     m_Modifications:
-    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 250437201432652942, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -730,6 +709,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}

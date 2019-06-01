@@ -11,10 +11,13 @@ public class ItemPickUp : MonoBehaviour
     [SerializeField] int ammoBoost = 1;
     [SerializeField] float attackRateBoost = 1;
     [SerializeField] float attackSpeedBoost = 1;
+
+    [HideInInspector] public int damageBoostCount;
     // Start is called before the first frame update
     void Start()
     {
         list = GetComponentInParent<PlayerController>().guns;
+        damageBoostCount = 0;
     }
 
     // Update is called once per frame
@@ -62,6 +65,7 @@ public class ItemPickUp : MonoBehaviour
                     {
                         list[i].GetComponent<Shooter>().damage += damageBoost;
                     }
+                    damageBoostCount++;
                     Destroy(other.gameObject);
                     Debug.Log("Item Consumed: Damage");
                     break;

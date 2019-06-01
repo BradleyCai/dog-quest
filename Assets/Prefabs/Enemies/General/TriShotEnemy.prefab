@@ -209,17 +209,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &2652713896789617243
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,17 +270,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &3351870583390162083
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,17 +363,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &3748611161839684605
 GameObject:
   m_ObjectHideFlags: 0
@@ -779,17 +794,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &4084494094002853969
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,17 +855,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &4539867354964247298
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,17 +919,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.5
-  angleOffset: 0
   speed: 3
   damage: 1
+  angleOffset: 0
   delay: 0.3
-  homing: 0
+  attackRate: 0.5
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &5571087225899984832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,17 +1191,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.5
-  angleOffset: 0
   speed: 3
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 0.5
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &6509930509899026059
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,14 +1252,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1579558452513261812, guid: 9465f0470bad80d49941e8b75e11000a,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 0
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 0
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2

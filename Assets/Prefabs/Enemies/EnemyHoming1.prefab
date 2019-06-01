@@ -202,15 +202,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
-  homing: 1
+  angleOffset: 0
+  attackRate: 0.75
+  homingBullet: 1
   rotationSpeed: 60
   laser: 0
-  lineRenderer: {fileID: 0}
-  laserFireRate: 2
+  laserFireTime: 2
+  laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1001 &7669128280320522955
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -218,11 +221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8328859625534692101}
     m_Modifications:
-    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 250437201432652942, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -327,6 +325,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}

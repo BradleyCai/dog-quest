@@ -73,7 +73,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.53, y: 0.52}
+  m_Size: {x: 0.54, y: 0.51}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -124,17 +124,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 1
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 40
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &5113160268439187000
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,17 +220,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 1
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 40
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &5521960257617332416
 GameObject:
   m_ObjectHideFlags: 0
@@ -271,17 +281,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 1
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 40
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &7718733781389948559
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,17 +505,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
+  angleOffset: 0
   delay: 0
-  homing: 1
+  attackRate: 0.75
+  homingBullet: 0
   rotationSpeed: 40
+  randomAngle: 0
+  startAngle: 0
+  stopAngle: 0
   laser: 0
-  homingLaser: 0
   laserFireTime: 2
   laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &9119929886721019573
 GameObject:
   m_ObjectHideFlags: 0
