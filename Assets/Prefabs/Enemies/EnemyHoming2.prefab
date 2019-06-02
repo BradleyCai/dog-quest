@@ -45,15 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
-  homing: 1
+  angleOffset: 0
+  attackRate: 0.75
+  homingBullet: 1
   rotationSpeed: 45
   laser: 0
-  lineRenderer: {fileID: 0}
-  laserFireRate: 2
+  laserFireTime: 2
+  laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &712534126831904961
 GameObject:
   m_ObjectHideFlags: 0
@@ -258,15 +261,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
-  homing: 1
+  angleOffset: 0
+  attackRate: 0.75
+  homingBullet: 1
   rotationSpeed: 45
   laser: 0
-  lineRenderer: {fileID: 0}
-  laserFireRate: 2
+  laserFireTime: 2
+  laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1 &5826341330612974174
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,15 +318,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 7835826783636854317, guid: 543e412268e503345bdb20f4bd1957d3,
     type: 3}
-  attackRate: 0.75
-  angleOffset: 0
   speed: 4
   damage: 1
-  homing: 1
+  angleOffset: 0
+  attackRate: 0.75
+  homingBullet: 1
   rotationSpeed: 45
   laser: 0
-  lineRenderer: {fileID: 0}
-  laserFireRate: 2
+  laserFireTime: 2
+  laserOffTime: 2
+  homingLaser: 0
+  laserHomingFireTime: 2
+  laserHomingOffTime: 2
 --- !u!1001 &4463277717494518201
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -328,11 +337,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2596471787517898871}
     m_Modifications:
-    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
-        type: 3}
-      propertyPath: m_Name
-      value: HealthBar
-      objectReference: {fileID: 0}
     - target: {fileID: 250437201432652942, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -437,6 +441,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250437201432652941, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_Name
+      value: HealthBar
       objectReference: {fileID: 0}
     - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
         type: 3}
