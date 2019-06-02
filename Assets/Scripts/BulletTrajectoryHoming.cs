@@ -4,38 +4,65 @@ using UnityEngine;
 
 public class BulletTrajectoryHoming : MonoBehaviour {
 
-	Transform player;
+	Transform origin;
+    Transform target;
+    public string[] targetTags;
 
-	public float rotationSpeed; // this value is set in Shooter, located in gun prefab
+	[HideInInspector] public float rotationSpeed; // this value is set in Shooter, located in gun prefab
 
     // Update is called once per frame
     void Update() {
+        origin = this.gameObject.transform;
     	
     	// Player just spawned, find player ship
-        if (player == null) {
-        	/*** change the string for player gameobject if player gets renamed ***/
-        	GameObject target = GameObject.Find("BasicPlayer"); 
+        if (target == null) {
+            /*** change the string for player gameobject if player gets renamed ***/
+            target = FindNearestEnemy().transform; 
 
-        	// found the player
-        	if (target != null) {
-        		player = target.transform;
-        	}
+        	// found the target
         }
 
         // Player doesn't exist in this frame, move to next frame
-        if (player == null) {
+        if (target == null) {
         	return;
         }
 
         // calculate distance vector
-    	Vector3 direction = player.position - transform.position;
+    	Vector3 direction = target.position - transform.position;
         direction.Normalize(); 
-        // calculate rotation toward player
+        // calculate rotation toward target
         float zAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90; 
         // convert rotation angle to quaternions
         Quaternion desiredRotation = Quaternion.Euler(0, 0, zAngle);
-        // set rotation toward player
+        // set rotation toward target
         transform.rotation = Quaternion.RotateTowards(transform.rotation, desiredRotation, rotationSpeed * Time.deltaTime);    
     
+    }
+
+    private GameObject FindNearestEnemy()
+    {
+        GameObject[] objects;
+        GameObject targetObject;
+        float distance = Mathf.Infinity;
+        float objectDistance = 0.0f;
+        targetObject = null;
+
+
+        for (int j = 0; j < targetTags.Length; j++)
+        {
+            objects = GameObject.FindGameObjectsWithTag(targetTags[j]);
+
+            for (int i = 0; i < objects.Length; i++)
+            {
+                objectDistance = (objects[i].transform.position - origin.position).sqrMagnitude;
+
+                if (objectDistance < distance)
+                {
+                    distance = objectDistance;
+                    targetObject = objects[i];
+                }
+            }
+        }
+        return targetObject;
     }
 }
