@@ -17,13 +17,6 @@ public class Shooter : MonoBehaviour {
     **/
     [Header("Basic Bullet (default)")]
     public float attackRate = 0.5f;
-<<<<<<< HEAD
-    public float angleOffset = 0;
-    public float speed = 1;
-    public int damage = 1;
-    GameObject bullet;
-
-=======
     float attackCooldown = 0f;
 
     /** Homing Bullet Attack: fires towards target
@@ -32,7 +25,6 @@ public class Shooter : MonoBehaviour {
       *
       * Default: rotationSpeed equals 0, so no homing ability
     **/
->>>>>>> a3c6aa34471cba84108b26a132ca26c3a4a006f7
     [Header("Homing Bullets")]
     [SerializeField] bool homingBullet = false;
     [SerializeField] float rotationSpeed = 0f;
