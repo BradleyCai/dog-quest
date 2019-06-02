@@ -45,7 +45,7 @@ public class Conductor : MonoBehaviour
                 return;
 
             time = 0;
-            actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position, Quaternion.identity);
+            actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position + transform.position, Quaternion.identity);
             currActor++;
         }
     }
