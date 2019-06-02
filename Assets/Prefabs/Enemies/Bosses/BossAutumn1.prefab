@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93807d27e38eded46a97594e946a8547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 3377740410011348162, guid: 150c39d29a16cf04c8cbadcc7e81e8e5, type: 3}
+  item: {fileID: 100002, guid: 150c39d29a16cf04c8cbadcc7e81e8e5, type: 3}
   minItems: 2
   maxItems: 3
 --- !u!114 &5193892263519608120

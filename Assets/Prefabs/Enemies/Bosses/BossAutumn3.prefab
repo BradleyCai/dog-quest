@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93807d27e38eded46a97594e946a8547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 100002, guid: 59d54fc20719ef34a96a9e5424ad7c4c, type: 3}
   minItems: 2
   maxItems: 3
 --- !u!114 &5193892263519608120
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b242a548e9cbffc46a9caf57e169cac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!1 &1226681977
 GameObject:
   m_ObjectHideFlags: 0
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 8040733601485567853}
   m_Layer: 0
   m_Name: Gun2
-  m_TagString: Boss
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 2728515586221396757}
   m_Layer: 0
   m_Name: Gun3
-  m_TagString: Boss
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTypeTag: Friendly Projectile
-  maxHealth: 100
+  maxHealth: 25
   bloodbar: {fileID: 8010052414442332052}
 --- !u!114 &6707801286300790411
 MonoBehaviour:
@@ -777,7 +777,7 @@ GameObject:
   - component: {fileID: 758642992453252451}
   m_Layer: 0
   m_Name: Gun1
-  m_TagString: Boss
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

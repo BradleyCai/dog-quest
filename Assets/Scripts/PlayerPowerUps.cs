@@ -10,7 +10,7 @@ public class PlayerPowerUps : MonoBehaviour
     private MonoBehaviour shield;
 
     public enum Power { L1, L2, L3, L4, L5 };
-    public Power p;
+    public Power playerPowerLevel;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +29,7 @@ public class PlayerPowerUps : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (p)
+        switch (playerPowerLevel)
         {
             case Power.L1:
                 specialAttack.enabled = false;
