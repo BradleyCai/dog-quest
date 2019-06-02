@@ -200,7 +200,7 @@ public class Shooter : MonoBehaviour {
         attackCooldown = 1 / attackRate; // just fired, reset cooldown
         bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot);
         bullet.layer = bulletLayer;  // sets gameObject to bullet
-        bullet.GetComponent<BulletTrajectoryLinear>().speed = speed;// + projMag; // sets speed for <BulletTrajectoryLinear>
+        bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
         bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>
     }
 }
