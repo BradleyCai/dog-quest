@@ -11,11 +11,14 @@ public class WinterBoss : MonoBehaviour
 
     public int phase;
 
+    [Header("Gun Sets\n")]
     public GameObject[] gunSet1;
     public GameObject[] gunSet2;
+    public GameObject[] gunSet3;
 
     private float time;
 
+    [Header("Rotation Settings\n")]
     private int rotationDirection;
     private float rotationSpeed;
     private float rotationTimer;
@@ -24,17 +27,27 @@ public class WinterBoss : MonoBehaviour
     public int[] rotationDirections;
     public float[] rotationSpeeds;
     public float[] rotationSegmentDurations;
-    
-    
 
     public float rotationDirectionDuration;
-
     public BasicRotator rotator;
+
+    [Header("On & Off")]
+    private bool onOffSet2;
+    private float set2Time;
+    public float set2OnDuration;
+    public float set2OffDuration;
+
+    private bool onOffSet3;
+    private float set3Time;
+    public float set3OnDuration;
+    public float set3OffDuration;
 
     // Start is called before the first frame update
     void Start()
     {
         time = 0;
+        set2Time = 0;
+        set3Time = 0;
 
         phaseTime = 0.0f;
         phaseCount = 0;
@@ -73,6 +86,36 @@ public class WinterBoss : MonoBehaviour
             rotator.angularSpeed = rotationSpeed * rotationDirection;
         }
         rotationTimer += Time.deltaTime;
+
+        // Next: OnOff weapons system
+        // Sets 2 and 3 will turn off and on at random, and the model of the boss will move to different locations to make it harder to hit
+        if (onOffSet2 && set2Time >= set2OnDuration)
+        {
+            DeactivateSet2();
+            onOffSet2 = false;
+            set2Time = 0;
+        }
+        else if (!onOffSet2 && set2Time >= set2OffDuration)
+        {
+            ActivateSet2();
+            onOffSet2 = true;
+            set2Time = 0;
+        }
+
+        if (onOffSet3 && set3Time >= set3OnDuration)
+        {
+            DeactivateSet3();
+            onOffSet3 = false;
+            set3Time = 0;
+        }
+        else if (!onOffSet3 && set3Time >= set3OffDuration)
+        {
+            ActivateSet3();
+            onOffSet3 = true;
+            set3Time = 0;
+        }
+        set2Time += Time.deltaTime;
+        set3Time += Time.deltaTime;
 
         time += Time.deltaTime;
         /*
@@ -137,6 +180,22 @@ public class WinterBoss : MonoBehaviour
         for (int i = 0; i < gunSet2.Length; i++)
         {
             gunSet2[i].GetComponent<Shooter>().enabled = false;
+        }
+    }
+
+    private void ActivateSet3()
+    {
+        for (int i = 0; i < gunSet3.Length; i++)
+        {
+            gunSet3[i].GetComponent<Shooter>().enabled = true;
+        }
+    }
+
+    private void DeactivateSet3()
+    {
+        for (int i = 0; i < gunSet3.Length; i++)
+        {
+            gunSet3[i].GetComponent<Shooter>().enabled = false;
         }
     }
 
