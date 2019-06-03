@@ -265,7 +265,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1800871687}
-  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -273,8 +273,8 @@ Transform:
   - {fileID: 1141279909}
   - {fileID: 1114594893}
   - {fileID: 838085667}
-  m_Father: {fileID: 6948929614025912420}
-  m_RootOrder: 3
+  m_Father: {fileID: 6948929613759614039}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!54 &1800871689
 Rigidbody:
@@ -569,12 +569,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6948929613160344272}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6948929613759614039}
-  m_RootOrder: 1
+  m_Father: {fileID: 6948929614025912420}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6948929613160344278
 SpriteRenderer:
@@ -709,7 +709,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6948929613557030285}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -717,8 +717,8 @@ Transform:
   - {fileID: 6948929614355184701}
   - {fileID: 6948929613144356673}
   - {fileID: 6948929613134530511}
-  m_Father: {fileID: 6948929614025912420}
-  m_RootOrder: 2
+  m_Father: {fileID: 6948929613759614039}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6948929613557030291
 Rigidbody:
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 4502481391677538673}
   m_Layer: 0
   m_Name: BossWinter
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -853,7 +853,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6948929614025912420}
-  - {fileID: 6948929613160344273}
+  - {fileID: 6948929613557030290}
+  - {fileID: 1800871688}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -884,9 +885,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbe3b08d8eea8b42ab955a45ccfc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseSequence: 00000000
+  phaseSequence: 0000000001000000020000000300000004000000
   phaseTimeLimits:
-  - 0
+  - 2
+  - 10
+  - 10
+  - 10
+  phaseTime: 0
   phase: 0
   gunSet1:
   - {fileID: 6948929613099483370}
@@ -1120,8 +1125,8 @@ GameObject:
   - component: {fileID: 6948929614025912426}
   - component: {fileID: 6948929614025912421}
   m_Layer: 0
-  m_Name: Model
-  m_TagString: Untagged
+  m_Name: WinterBossModel
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1137,10 +1142,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 6948929614512731882}
   - {fileID: 6948929615066070139}
-  - {fileID: 6948929613557030290}
-  - {fileID: 1800871688}
+  - {fileID: 6948929614512731882}
+  - {fileID: 6948929613160344273}
   m_Father: {fileID: 6948929613759614039}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1322,7 +1326,7 @@ RectTransform:
   m_Children:
   - {fileID: 6948929613903228634}
   m_Father: {fileID: 6948929614025912420}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1474,7 +1478,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6948929615066070138}
-  m_LocalRotation: {x: 0, y: 0, z: 0.38268343, w: 0.92387956}
+  m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1483,7 +1487,7 @@ Transform:
   - {fileID: 6948929615010715688}
   - {fileID: 6948929613159085438}
   m_Father: {fileID: 6948929614025912420}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 45}
 --- !u!114 &6948929615066070137
 MonoBehaviour:

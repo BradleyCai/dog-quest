@@ -16,9 +16,6 @@ public class WinterBoss : MonoBehaviour
     public GameObject[] gunSet1;
     public GameObject[] gunSet2;
     public GameObject[] gunSet3;
-
-    private float time;
-
     
     private int rotationDirection;
     private float rotationSpeed;
@@ -45,13 +42,12 @@ public class WinterBoss : MonoBehaviour
     public float set3OnDuration;
     public float set3OffDuration;
 
-   
+    private Transform modelTransform;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        time = 0;
         set2Time = 0;
         set3Time = 0;
 
@@ -59,8 +55,9 @@ public class WinterBoss : MonoBehaviour
         phaseCount = 0;
         phase = phaseSequence[phaseCount];
 
-        ActivateSet1();
+        DeactivateSet1();
         DeactivateSet2();
+        DeactivateSet3();
 
         if (rotationDirections.Length > 0)
         {
@@ -73,88 +70,160 @@ public class WinterBoss : MonoBehaviour
         }
 
         rotationTimer = 0;
+
+        modelTransform = GameObject.Find("WinterBossModel").GetComponent<Transform>();
     }
 
     
     // Update is called once per frame
     void Update()
     {
-        if (rotationTimer >= rotationSegmentDurations[rotationCounter])
+        switch (phase)
         {
-            rotationTimer = 0;
-            rotationCounter++;
-            if (rotationCounter >= rotationSegmentDurations.Length)
-            {
-                rotationCounter = 0;
-            }
-            SetRotationDirection();
-            SetRotationSpeed();
-            rotator.angularSpeed = rotationSpeed * rotationDirection;
-        }
-        rotationTimer += Time.deltaTime;
+            case 0:
+                
+                break;
+            case 1:
+                if (rotationTimer >= rotationSegmentDurations[rotationCounter])
+                {
+                    rotationTimer = 0;
+                    rotationCounter++;
+                    if (rotationCounter >= rotationSegmentDurations.Length)
+                    {
+                        rotationCounter = 0;
+                    }
+                    SetRotationDirection();
+                    SetRotationSpeed();
+                    rotator.angularSpeed = rotationSpeed * rotationDirection;
+                }
+                rotationTimer += Time.deltaTime;
+                break;
+            case 2:
+                if (onOffSet2 && set2Time >= set2OnDuration)
+                {
+                    DeactivateSet2();
+                    onOffSet2 = false;
+                    set2Time = 0;
+                }
+                else if (!onOffSet2 && set2Time >= set2OffDuration)
+                {
+                    ActivateSet2();
+                    onOffSet2 = true;
+                    set2Time = 0;
+                }
 
-        // Next: OnOff weapons system
-        // Sets 2 and 3 will turn off and on at random, and the model of the boss will move to different locations to make it harder to hit
-        if (onOffSet2 && set2Time >= set2OnDuration)
-        {
-            DeactivateSet2();
-            onOffSet2 = false;
-            set2Time = 0;
-        }
-        else if (!onOffSet2 && set2Time >= set2OffDuration)
-        {
-            ActivateSet2();
-            onOffSet2 = true;
-            set2Time = 0;
-        }
+                if (onOffSet3 && set3Time >= set3OnDuration)
+                {
+                    DeactivateSet3();
+                    onOffSet3 = false;
+                    set3Time = 0;
+                }
+                else if (!onOffSet3 && set3Time >= set3OffDuration)
+                {
+                    ActivateSet3();
+                    onOffSet3 = true;
+                    set3Time = 0;
+                }
+                set2Time += Time.deltaTime;
+                set3Time += Time.deltaTime;
+                break;
+            case 3:
+                if (rotationTimer >= rotationSegmentDurations[rotationCounter])
+                {
+                    rotationTimer = 0;
+                    rotationCounter++;
+                    if (rotationCounter >= rotationSegmentDurations.Length)
+                    {
+                        rotationCounter = 0;
+                    }
+                    SetRotationDirection();
+                    SetRotationSpeed();
+                    rotator.angularSpeed = rotationSpeed * rotationDirection;
+                }
+                rotationTimer += Time.deltaTime;
+                break;
+            case 4:
+                if (rotationTimer >= rotationSegmentDurations[rotationCounter])
+                {
+                    rotationTimer = 0;
+                    rotationCounter++;
+                    if (rotationCounter >= rotationSegmentDurations.Length)
+                    {
+                        rotationCounter = 0;
+                    }
+                    SetRotationDirection();
+                    SetRotationSpeed();
+                    rotator.angularSpeed = rotationSpeed * rotationDirection;
+                }
+                rotationTimer += Time.deltaTime;
 
-        if (onOffSet3 && set3Time >= set3OnDuration)
-        {
-            DeactivateSet3();
-            onOffSet3 = false;
-            set3Time = 0;
-        }
-        else if (!onOffSet3 && set3Time >= set3OffDuration)
-        {
-            ActivateSet3();
-            onOffSet3 = true;
-            set3Time = 0;
-        }
-        set2Time += Time.deltaTime;
-        set3Time += Time.deltaTime;
+                if (onOffSet3 && set3Time >= set3OnDuration)
+                {
+                    DeactivateSet3();
+                    onOffSet3 = false;
+                    set3Time = 0;
+                }
+                else if (!onOffSet3 && set3Time >= set3OffDuration)
+                {
+                    ActivateSet3();
+                    onOffSet3 = true;
+                    set3Time = 0;
+                }
 
-        time += Time.deltaTime;
-        /*
-        if (phaseTime >= phaseTimeLimits[phaseCount]) { }
+                set3Time += Time.deltaTime;
+                break;
+            default:
+                 break;
+        }
+        phaseTime += Time.deltaTime;
+
+        if (phaseTime >= phaseTimeLimits[phaseCount])
         {
             phaseTime = 0;
-            phaseCount += 1;
+            phaseCount++;
+
+            if (phaseCount >= phaseTimeLimits.Length)
+            {
+                phaseCount = 0;
+            }
+
+            phase = phaseSequence[phaseCount];
+
             switch (phase)
             {
                 case 0:
-                    phase = phaseSequence[phaseCount];
+                    modelTransform.localPosition = new Vector3(0, 0, 0);
+                    modelTransform.localPosition += new Vector3(Random.Range(-1, 2) * 2.0f, Random.Range(0, 2) * 2.0f, 0);
+
+                    DeactivateSet1();
+                    DeactivateSet2();
+                    DeactivateSet3();
                     break;
                 case 1:
-                    DeactivateSet2();
                     ActivateSet1();
+                    DeactivateSet2();
+                    DeactivateSet3();
                     break;
                 case 2:
                     DeactivateSet1();
                     ActivateSet2();
+                    ActivateSet3();
                     break;
                 case 3:
                     ActivateSet1();
                     ActivateSet2();
+                    DeactivateSet3();
+                    break;
+                case 4:
+                    ActivateSet1();
+                    DeactivateSet2();
+                    ActivateSet3();
                     break;
                 default:
                     break;
             }
 
-            phase = phaseSequence[phaseCount];
         }
-        
-        phaseTime += Time.deltaTime;
-        */
     }
   
     private void ActivateSet1()
