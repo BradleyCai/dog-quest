@@ -32,21 +32,31 @@ public class Conductor : MonoBehaviour
                     cleared = false;
             }
 
-            if (cleared) {
-                Destroy(this.gameObject);
-            }
-            else if (loop) {
+            if (loop && cleared) {
                 currActor = 0;
                 time = 0;
             }
+            else if (cleared) {
+                Destroy(this.gameObject);
+            }
+        }
+        else if (currActor > 0 && actors[currActor].waitOnPrev && actors[currActor - 1].gameObject != null) {
+            time = 0;
         }
         else if (time > actors[currActor].spawnDelay) {
-            if (actors[currActor].waitOnPrev && (currActor == 0 || actors[currActor - 1].gameObject != null))
-                return;
-
             time = 0;
             actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position + transform.position, Quaternion.identity);
             currActor++;
         }
+        // else if (actors[currActor].waitOnPrev) {
+        //     if (currActor > 0 && actors[currActor - 1].gameObject == null) {
+                
+        //     }
+        // }
+        // else if (time > actors[currActor].spawnDelay) {
+        //     time = 0;
+        //     actors[currActor].gameObject = Instantiate(actors[currActor].gameObject, actors[currActor].position + transform.position, Quaternion.identity);
+        //     currActor++;
+        // }
     }
 }
