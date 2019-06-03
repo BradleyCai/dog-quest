@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class WinterBoss : MonoBehaviour
 {
-    private float phaseTime;
+    [Header("Phase Settings")]
     public int[] phaseSequence;
     public float[] phaseTimeLimits;
     private int phaseCount;
+    private float phaseTime;
 
     public int phase;
 
-    [Header("Gun Sets\n")]
+    [Header("Gun Sets")]
     public GameObject[] gunSet1;
     public GameObject[] gunSet2;
     public GameObject[] gunSet3;
 
     private float time;
 
-    [Header("Rotation Settings\n")]
+    
     private int rotationDirection;
     private float rotationSpeed;
     private float rotationTimer;
     private int rotationCounter;
 
+    [Header("Rotation Settings")]
     public int[] rotationDirections;
     public float[] rotationSpeeds;
     public float[] rotationSegmentDurations;
@@ -31,16 +33,20 @@ public class WinterBoss : MonoBehaviour
     public float rotationDirectionDuration;
     public BasicRotator rotator;
 
-    [Header("On & Off")]
+    
     private bool onOffSet2;
     private float set2Time;
-    public float set2OnDuration;
-    public float set2OffDuration;
-
     private bool onOffSet3;
     private float set3Time;
+
+    [Header("On & Off")]
+    public float set2OnDuration;
+    public float set2OffDuration;
     public float set3OnDuration;
     public float set3OffDuration;
+
+   
+    
 
     // Start is called before the first frame update
     void Start()
