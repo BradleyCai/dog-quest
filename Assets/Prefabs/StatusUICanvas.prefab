@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1417818813881702205}
   - component: {fileID: 1417818813881702207}
   - component: {fileID: 1417818813881702206}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SidebarBackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 1417818814174462286}
   - component: {fileID: 1417818814174462280}
   - component: {fileID: 1417818814174462287}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DamageBoostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 1417818814297598898}
   - component: {fileID: 1417818814297598908}
   - component: {fileID: 1417818814297598899}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TeamNameImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 1417818814399451428}
   - component: {fileID: 1417818814399451430}
   - component: {fileID: 1417818814399451429}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LevelImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 1417818814448630014}
   - component: {fileID: 1417818814448630008}
   - component: {fileID: 1417818814448630015}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SidebarBackgoundImage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 1417818814711289485}
   - component: {fileID: 1417818814711289484}
   - component: {fileID: 1417818814711289480}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: StatusUICanvas
   m_TagString: StatusUI
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 1417818815005268709}
   - component: {fileID: 1417818815005268711}
   - component: {fileID: 1417818815005268710}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DamageBoostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 1417818815199466565}
   - component: {fileID: 1417818815199466567}
   - component: {fileID: 1417818815199466566}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SpecialAttackAmmoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 1417818815381220756}
   - component: {fileID: 1417818815381220758}
   - component: {fileID: 1417818815381220757}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LevelNameImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 1417818815547702375}
   - component: {fileID: 1417818815547702369}
   - component: {fileID: 1417818815547702368}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ScoreIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 1417818815599569436}
   - component: {fileID: 1417818815599569438}
   - component: {fileID: 1417818815599569437}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 1417818815933798264}
   - component: {fileID: 1417818815933798266}
   - component: {fileID: 1417818815933798265}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SpecialAttackAmmoIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
