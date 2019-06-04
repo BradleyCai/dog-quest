@@ -19,7 +19,7 @@ public class SpringBoss : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        bossTransform = this.gameObject.transform;
+        bossTransform = GameObject.Find("SpringBossModel").transform;
         initialX = bossTransform.position.x;
 
         time = 0;
@@ -33,6 +33,6 @@ public class SpringBoss : MonoBehaviour
             GetComponentInChildren<SpringBossFlowerShooter>().enabled = true;
         }
 
-        transform.position = new Vector3(initialX + width * Mathf.Sin(bossSpeed * Time.time), transform.position.y, transform.position.z);
+        bossTransform.position = new Vector3(initialX + width * Mathf.Sin(bossSpeed * Time.time), transform.position.y, transform.position.z);
     }
 }

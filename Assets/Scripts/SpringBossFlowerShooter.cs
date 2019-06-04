@@ -16,6 +16,8 @@ public class SpringBossFlowerShooter : MonoBehaviour
 
     private float time;
 
+    public new GameObject particleSystem;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -45,6 +47,7 @@ public class SpringBossFlowerShooter : MonoBehaviour
         {
             this.gameObject.transform.position = player.position;
             hasTeleported = true;
+            Instantiate(particleSystem, this.gameObject.transform);
         }
 
         if (time >= waitTimeTeleport + waitTimeFire)

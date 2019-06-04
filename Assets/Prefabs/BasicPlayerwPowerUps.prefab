@@ -152,7 +152,7 @@ BoxCollider:
   m_GameObject: {fileID: 2605814430792154848}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.53364307, y: 0.5400317, z: 1}
   m_Center: {x: -0.000000029802322, y: 0.003194213, z: 0}
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c226955ffaafc64bb35bd9210ca71e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerLevelOfPlayerCharacterThatIsDog: 0
+  playerPowerLevel: 0
 --- !u!1 &3049147989570642592
 GameObject:
   m_ObjectHideFlags: 0
@@ -1061,6 +1061,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 250437201383844517, guid: b74bcbc8c862c884fb64e98d4df77e87,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b74bcbc8c862c884fb64e98d4df77e87, type: 3}
