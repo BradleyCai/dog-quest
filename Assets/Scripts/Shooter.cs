@@ -5,10 +5,12 @@ using UnityEngine;
 public class Shooter : MonoBehaviour {
 
     public GameObject bulletPrefab; // skin of the bullet being fired
+
     int bulletLayer;                // stores which layer 'bullet' is in unity
     public float speed = 1;         // how fast a bullet travels
     public int damage = 1;          // how much damage a bullet does
     public float angleOffset = 0;   // the angle the bullet is fired from
+    public float delay = 0;         // delay before the shooter starts shooting
 
     /** Basic Linear Attack (default): fires straight 
       * If nothing is selected, this is used as default
@@ -26,8 +28,8 @@ public class Shooter : MonoBehaviour {
       * Default: rotationSpeed equals 0, so no homing ability
     **/
     [Header("Homing Bullets")]
-    [SerializeField] bool homingBullet = false;
-    [SerializeField] float rotationSpeed = 0f;
+    public bool homingBullet = false;
+    public float rotationSpeed = 0f;
 
     /** Random Angle Attack: define angles in unity and fire a bullet with the random angle
       * randomAngle: bullet fires with a random angle
@@ -37,9 +39,9 @@ public class Shooter : MonoBehaviour {
       * Default: startAngle and stopAngle equal 0 so they shoot straight
     **/
     [Header("Random Angle")]
-    [SerializeField] bool randomAngle = false;
-    [SerializeField] float startAngle = 0f;
-    [SerializeField] float stopAngle = 0f;
+    public bool randomAngle = false;
+    public float startAngle = 0f;
+    public float stopAngle = 0f;
 
     /** Laser Attack: fires a laser linearly 
       * laser: selection on unity menu to set enemy to fire lasters
@@ -47,9 +49,9 @@ public class Shooter : MonoBehaviour {
       * laserOffTime: length of time laser does not fire
     **/
     [Header("Laser")]
-    [SerializeField] bool laser = false;
-    [SerializeField] float laserFireTime = 2f;
-    [SerializeField] float laserOffTime = 2f;
+    public bool laser = false;
+    public float laserFireTime = 2f;
+    public float laserOffTime = 2f;
     float laserCooldown;
 
     /** Homing Laser Attack: fires a laser linearly towards a target
@@ -58,9 +60,9 @@ public class Shooter : MonoBehaviour {
       * laserOffTime: length of time laser does not fire
     **/
     [Header("Homing Laser")]
-    [SerializeField] bool homingLaser = false;
-    [SerializeField] float laserHomingFireTime = 2f;
-    [SerializeField] float laserHomingOffTime = 2f;
+    public bool homingLaser = false;
+    public float laserHomingFireTime = 2f;
+    public float laserHomingOffTime = 2f;
     float laserHomingCooldown;
 
     Quaternion rot;
@@ -70,9 +72,9 @@ public class Shooter : MonoBehaviour {
     bool fired;
 
     // Start is called before the first frame update
-    void Start() {
+    public void Start() {
         bulletLayer = gameObject.layer; // layer in unity should be set to bullet
-        attackCooldown = 0f;
+        attackCooldown = delay;
         laserCooldown = laserFireTime;
         laserHomingCooldown = laserHomingFireTime;
         fired = false;
@@ -194,10 +196,9 @@ public class Shooter : MonoBehaviour {
     }
 
     void BasicAttack() {
+        rot = Quaternion.Euler(0, 0, angleOffset) * transform.rotation; // sets bullet rotation
         attackCooldown = 1 / attackRate; // just fired, reset cooldown
-
-        rot = Quaternion.Euler(0, 0, angleOffset); // sets bullet rotation
-        bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot * transform.rotation); 
+        bullet = (GameObject)Instantiate(bulletPrefab, gameObject.transform.position, rot);
         bullet.layer = bulletLayer;  // sets gameObject to bullet
         bullet.GetComponent<BulletTrajectoryLinear>().speed = speed; // sets speed for <BulletTrajectoryLinear>
         bullet.GetComponent<BulletTrajectoryLinear>().damage = damage; // sets damage for <BulletTrajectoryLinear>

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1417818813881702205}
   - component: {fileID: 1417818813881702207}
   - component: {fileID: 1417818813881702206}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SidebarBackgroundImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ RectTransform:
   m_GameObject: {fileID: 1417818813881702204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 1
@@ -85,7 +85,7 @@ GameObject:
   - component: {fileID: 1417818814174462286}
   - component: {fileID: 1417818814174462280}
   - component: {fileID: 1417818814174462287}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DamageBoostIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,14 +101,14 @@ RectTransform:
   m_GameObject: {fileID: 1417818814174462285}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 304, y: 30}
+  m_AnchoredPosition: {x: 302.00012, y: 30}
   m_SizeDelta: {x: 42, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1417818814174462280
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 1417818814297598898}
   - component: {fileID: 1417818814297598908}
   - component: {fileID: 1417818814297598899}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: TeamNameImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ RectTransform:
   m_GameObject: {fileID: 1417818814297598897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 4
@@ -233,7 +233,7 @@ GameObject:
   - component: {fileID: 1417818814399451428}
   - component: {fileID: 1417818814399451430}
   - component: {fileID: 1417818814399451429}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LevelImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ RectTransform:
   m_GameObject: {fileID: 1417818814399451419}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 2
@@ -307,7 +307,7 @@ GameObject:
   - component: {fileID: 1417818814448630014}
   - component: {fileID: 1417818814448630008}
   - component: {fileID: 1417818814448630015}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SidebarBackgoundImage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ RectTransform:
   m_GameObject: {fileID: 1417818814448630013}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 0
@@ -383,7 +383,7 @@ GameObject:
   - component: {fileID: 1417818814711289485}
   - component: {fileID: 1417818814711289484}
   - component: {fileID: 1417818814711289480}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: StatusUICanvas
   m_TagString: StatusUI
   m_Icon: {fileID: 0}
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 1417818815005268709}
   - component: {fileID: 1417818815005268711}
   - component: {fileID: 1417818815005268710}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: DamageBoostText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -524,14 +524,14 @@ RectTransform:
   m_GameObject: {fileID: 1417818815005268708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415, y: 30}
+  m_AnchoredPosition: {x: 415.77, y: 30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1417818815005268711
@@ -587,7 +587,7 @@ GameObject:
   - component: {fileID: 1417818815199466565}
   - component: {fileID: 1417818815199466567}
   - component: {fileID: 1417818815199466566}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SpecialAttackAmmoText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -603,14 +603,14 @@ RectTransform:
   m_GameObject: {fileID: 1417818815199466564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415, y: 90}
+  m_AnchoredPosition: {x: 415.77, y: 90}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1417818815199466567
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 1417818815381220756}
   - component: {fileID: 1417818815381220758}
   - component: {fileID: 1417818815381220757}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: LevelNameImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ RectTransform:
   m_GameObject: {fileID: 1417818815381220747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 3
@@ -740,7 +740,7 @@ GameObject:
   - component: {fileID: 1417818815547702375}
   - component: {fileID: 1417818815547702369}
   - component: {fileID: 1417818815547702368}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ScoreIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -756,14 +756,14 @@ RectTransform:
   m_GameObject: {fileID: 1417818815547702374}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 304, y: -30}
+  m_AnchoredPosition: {x: 302.00012, y: -30}
   m_SizeDelta: {x: 42, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1417818815547702369
@@ -814,7 +814,7 @@ GameObject:
   - component: {fileID: 1417818815599569436}
   - component: {fileID: 1417818815599569438}
   - component: {fileID: 1417818815599569437}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -830,14 +830,14 @@ RectTransform:
   m_GameObject: {fileID: 1417818815599569427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 415, y: -30}
+  m_AnchoredPosition: {x: 415.77, y: -30}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1417818815599569438
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 1417818815933798264}
   - component: {fileID: 1417818815933798266}
   - component: {fileID: 1417818815933798265}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SpecialAttackAmmoIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,14 +909,14 @@ RectTransform:
   m_GameObject: {fileID: 1417818815933798271}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1417818814711289487}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 304, y: 90}
+  m_AnchoredPosition: {x: 302.00012, y: 90}
   m_SizeDelta: {x: 42, y: 42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1417818815933798266

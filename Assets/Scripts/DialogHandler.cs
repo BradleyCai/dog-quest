@@ -7,6 +7,7 @@ public class DialogHandler : MonoBehaviour
 {
     public Text textObj;
     public float charDelay;
+    [TextArea(3,10)]
     public string[] lines;
 
     private int lineIndex;
@@ -33,11 +34,18 @@ public class DialogHandler : MonoBehaviour
     {
         time += Time.unscaledDeltaTime;
         if (Input.GetButtonDown("Submit")) {
-            resetLine();
-            lineIndex++;
-            if (lineIndex >= lines.Length) {
-                Time.timeScale = 1.0f;
-                Destroy(this.gameObject);
+            if (charIndex < lines[lineIndex].Length) {
+                textObj.text = lines[lineIndex];
+                charIndex = lines[lineIndex].Length;
+                time = 0;
+            }
+            else {
+                resetLine();
+                lineIndex++;
+                if (lineIndex >= lines.Length) {
+                    Time.timeScale = 1.0f;
+                    Destroy(this.gameObject);
+                }
             }
         }
         else if (charIndex < lines[lineIndex].Length) {

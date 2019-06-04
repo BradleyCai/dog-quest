@@ -15,6 +15,7 @@ public class ScoreGiver : MonoBehaviour
 
     private void OnDestroy()
     {
-        statusUI.GetComponent<StatusUI>().scoreCount += scoreOnDeath;
+        if (statusUI != null)
+            statusUI.GetComponent<StatusUI>().scoreCount += scoreOnDeath;
     }
 }

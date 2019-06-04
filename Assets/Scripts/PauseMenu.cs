@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
     {
         canvas.enabled = false;
         onOff = false;
+        Time.timeScale = 1.0f;
     }
 
     // Update is called once per frame
