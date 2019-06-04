@@ -10,10 +10,14 @@ public class DamageTaker : MonoBehaviour
     public Slider bloodbar;
     public int health;
 
+    private AudioClip deadClip;
+    private AudioClip collisonClip;
     // Start is called before the first frame update
     void Start()
     {
         health = maxHealth;
+        deadClip = (AudioClip)Resources.Load("Sound Effects/death1", typeof(AudioClip));
+        collisonClip = (AudioClip)Resources.Load("Sound Effects/stone_collision", typeof(AudioClip));
     }
 
     // Update is called once per frame
@@ -38,6 +42,7 @@ public class DamageTaker : MonoBehaviour
         if (other.tag == damageTypeTag) {
             health -= other.gameObject.GetComponent<BulletTrajectoryLinear>().damage;
             if (other.gameObject.name != "LaserBullet(Clone)") {
+                AudioSource.PlayClipAtPoint(collisonClip, transform.position);
                 //GameObject.Destroy(other.gameObject);
             }
         }

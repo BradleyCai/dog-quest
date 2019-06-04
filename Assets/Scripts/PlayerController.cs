@@ -18,9 +18,12 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 playerSize;
 
+    private AudioClip fireClip;
+
     // Start is called before the first frame update
     void Start()
     {
+        fireClip = (AudioClip)Resources.Load("Sound Effects/player_attack", typeof(AudioClip));
         t = this.GetComponent<Transform>();
         playerSize.x = GetComponent<BoxCollider>().size.x;
         playerSize.y = GetComponent<BoxCollider>().size.y;
@@ -70,6 +73,7 @@ public class PlayerController : MonoBehaviour
         {
             for (int i = 0; i < guns.Count; i++)
             {
+                AudioSource.PlayClipAtPoint(fireClip, transform.position);
                 guns[i].GetComponent<Shooter>().enabled = true; // enables Shooter Script on guns
             }
         }

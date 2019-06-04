@@ -20,7 +20,7 @@ public class PauseMenu : MonoBehaviour
         canvas.enabled = false;
         onOff = false;
         Time.timeScale = 1.0f;
-isMute = false;
+        isMute = false;
         btn = soundBt.GetComponent<Button>();
         btn.onClick.AddListener(delegate ()
         {
