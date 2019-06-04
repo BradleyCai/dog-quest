@@ -1504,7 +1504,7 @@ PrefabInstance:
     - target: {fileID: 5285306387386608641, guid: bc8d1d3e62233e948adfcd37a6177f9d,
         type: 3}
       propertyPath: playerPowerLevel
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1539804499021553509, guid: bc8d1d3e62233e948adfcd37a6177f9d,
         type: 3}
