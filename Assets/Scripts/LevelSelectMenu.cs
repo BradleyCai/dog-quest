@@ -88,22 +88,22 @@ public class LevelSelectMenu : MonoBehaviour
 
     public void GoToWinter()
     {
-        //SceneManager.LoadScene("LevelWinter");
+        SceneManager.LoadScene("WinterLevel");
     }
 
     public void GoToSpring()
     {
-        //SceneManager.LoadScene("LevelSpring");
+        SceneManager.LoadScene("SpringLevel");
     }
 
     public void GoToSummer()
     {
-        //SceneManager.LoadScene("LevelSummer");
+        SceneManager.LoadScene("SummerLevel");
     }
 
     public void GoToUnknown()
     {
-        //SceneManager.LoadScene("LevelUnknown");
+        SceneManager.LoadScene("SpaceLevel");
     }
 
     public void GoBack()
