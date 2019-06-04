@@ -243,8 +243,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shield: {fileID: 3035726884216433796}
-  duration: 0
-  cooldownDuration: 0
+  duration: 5
+  cooldownDuration: 3
 --- !u!1 &3049147989570642592
 GameObject:
   m_ObjectHideFlags: 0

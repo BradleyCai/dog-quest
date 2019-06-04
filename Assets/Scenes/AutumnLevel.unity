@@ -1506,6 +1506,16 @@ PrefabInstance:
       propertyPath: playerPowerLevel
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2361488815005899072, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: duration
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361488815005899072, guid: bc8d1d3e62233e948adfcd37a6177f9d,
+        type: 3}
+      propertyPath: cooldownDuration
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1539804499021553509, guid: bc8d1d3e62233e948adfcd37a6177f9d,
         type: 3}
       propertyPath: speed
