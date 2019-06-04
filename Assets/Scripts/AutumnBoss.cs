@@ -9,6 +9,7 @@ public class AutumnBoss : MonoBehaviour
     private float xBoundary;
     private float yBoundary;
     private float xOffset;
+    private float yOffset;
 
     private int xDirection;
     private int yDirection;
@@ -22,9 +23,10 @@ public class AutumnBoss : MonoBehaviour
         size.x = GetComponentInChildren<BoxCollider>().size.x * t.localScale.x;
         size.y = GetComponentInChildren<BoxCollider>().size.y * t.localScale.y;
 
-        yBoundary = Camera.main.orthographicSize - size.y / 2.0f;
+        yBoundary = (Camera.main.orthographicSize - size.y / 2.0f) / 2.0f;
         xBoundary = Camera.main.orthographicSize - size.x / 2.0f;
         xOffset = Camera.main.orthographicSize / 3.0f;
+        yOffset = yBoundary / 2.0f;
 
         xDirection = Random.Range(-1, 1);
         if (xDirection == 0)
@@ -48,9 +50,9 @@ public class AutumnBoss : MonoBehaviour
             t.position = new Vector3((xDirection * xBoundary) - xOffset, t.position.y, 0);
             xDirection *= -1;
         }
-        if (t.position.y >= yBoundary || t.position.y <= -yBoundary)
+        if (t.position.y >= yBoundary + yOffset || t.position.y <= -yBoundary + yOffset)
         {
-            t.position = new Vector3(t.position.x, yDirection * yBoundary, 0);
+            t.position = new Vector3(t.position.x, yDirection * yBoundary + yOffset, 0);
             yDirection *= -1;
         }
     }

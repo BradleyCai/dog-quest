@@ -15,14 +15,14 @@ public class PlayerHomingGuns : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.V) && Time.timeScale != 0.0f && !Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.C) && Time.timeScale != 0.0f)
         {
             for (int i = 0; i < guns.Count; i++)
             {
                 guns[i].GetComponent<Shooter>().enabled = true;
             }
         }
-        else if (Input.GetKeyUp(KeyCode.V) || Input.GetKey(KeyCode.Space))
+        else if (Input.GetKeyUp(KeyCode.C))
         {
             for (int i = 0; i < guns.Count; i++)
             {

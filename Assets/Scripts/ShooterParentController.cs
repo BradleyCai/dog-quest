@@ -11,7 +11,6 @@ public class ShooterParentController : Shooter
             shooter.bulletPrefab = bulletPrefab;
             shooter.speed = speed;
             shooter.damage = damage;
-            shooter.angleOffset = angleOffset;
             shooter.delay = delay;
             shooter.attackRate = attackRate;
             shooter.homingBullet = homingBullet;

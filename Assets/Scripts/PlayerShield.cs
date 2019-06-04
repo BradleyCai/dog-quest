@@ -22,7 +22,7 @@ public class PlayerShield : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F) && !onCooldown)
+        if (Input.GetKeyDown(KeyCode.X) && !onCooldown)
         {
             shield.SetActive(true);
             active = true;

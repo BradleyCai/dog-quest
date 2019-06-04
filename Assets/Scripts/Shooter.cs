@@ -92,6 +92,7 @@ public class Shooter : MonoBehaviour {
                 // if the bullet is homing, set "homing" effectiveness 
                 if (homingBullet) {
                     bullet.GetComponent<BulletTrajectoryHoming>().rotationSpeed = rotationSpeed; // sets the roation sepped for <BulletTrajectoryHoming>
+                    bullet.GetComponent<BulletTrajectoryHoming>().angleOffset = angleOffset; // sets the roation sepped for <BulletTrajectoryHoming>
                 }
             }
         }
