@@ -669,13 +669,13 @@ PrefabInstance:
     - target: {fileID: 3472071919631535638, guid: e62c247e0a49b9e4294f70b2eda6ab70,
         type: 3}
       propertyPath: actors.Array.size
-      value: 9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3472071919631535638, guid: e62c247e0a49b9e4294f70b2eda6ab70,
         type: 3}
       propertyPath: actors.Array.data[0].gameObject
       value: 
-      objectReference: {fileID: 5943119947620881743, guid: 8aa91052a33187f408ad92948eab43cd,
+      objectReference: {fileID: 2995627035160710957, guid: 4388d73a8818e0a4697e6ea78510885d,
         type: 3}
     - target: {fileID: 3472071919631535638, guid: e62c247e0a49b9e4294f70b2eda6ab70,
         type: 3}
@@ -686,7 +686,7 @@ PrefabInstance:
         type: 3}
       propertyPath: actors.Array.data[1].gameObject
       value: 
-      objectReference: {fileID: 7164616741999113801, guid: 998952ad28c2eeb4cb0fa0566ab97342,
+      objectReference: {fileID: 4083403118852538795, guid: 5b6141d7aaba3f94fb27d51f64ecef8d,
         type: 3}
     - target: {fileID: 3472071919631535638, guid: e62c247e0a49b9e4294f70b2eda6ab70,
         type: 3}
