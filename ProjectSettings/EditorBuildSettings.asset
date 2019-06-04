@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AutumnLevel.unity
     guid: 3dbf75b7ee5807141aadd301ea4369d2
+  - enabled: 1
+    path: Assets/Scenes/TutorialLevel.unity
+    guid: d5f7caa1db243864ca8cf7f8c0faa193
+  - enabled: 1
+    path: Assets/Scenes/WinterLevel.unity
+    guid: 3730c73b1b02b17418eb52b4e4ea04b6
+  - enabled: 1
+    path: Assets/Scenes/SpringLevel.unity
+    guid: ff97780e7c0df074aa831b2c0655f87a
+  - enabled: 1
+    path: Assets/Scenes/SummerLevel.unity
+    guid: 2d204437d88f5ca4f817501b761b8878
+  - enabled: 1
+    path: Assets/Scenes/SpaceLevel.unity
+    guid: f9326bd3ea701ed42ad5d791dfa8d6b3
   m_configObjects: {}
