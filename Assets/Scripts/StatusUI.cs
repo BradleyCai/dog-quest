@@ -26,6 +26,9 @@ public class StatusUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null) // if player doesn't exist, don't update the ui
+            return;
+
         specialAttackAmmoCount = player.GetComponent<SpecialAttack>().ammo;
         damageBoostCount = player.GetComponent<ItemPickUp>().damageBoostCount;
         if (scoreCount < 0)

@@ -22,7 +22,7 @@ public class TitleScreenMenu : MonoBehaviour
 
     public void GameStart()
     {
-        
+        SceneManager.LoadScene("AutumnLevel");
     }
 
     public void LevelSelect()
