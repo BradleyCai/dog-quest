@@ -415,6 +415,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossWinter
       objectReference: {fileID: 0}
+    - target: {fileID: 4502481391677538673, guid: 7bd896fa1277c694982774a06ea52931,
+        type: 3}
+      propertyPath: phaseTimeLimits.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502481391677538673, guid: 7bd896fa1277c694982774a06ea52931,
+        type: 3}
+      propertyPath: phaseTimeLimits.Array.data[2]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4502481391677538673, guid: 7bd896fa1277c694982774a06ea52931,
+        type: 3}
+      propertyPath: phaseTimeLimits.Array.data[3]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948929613657491233, guid: 7bd896fa1277c694982774a06ea52931,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948929613657491233, guid: 7bd896fa1277c694982774a06ea52931,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6948929613759614039, guid: 7bd896fa1277c694982774a06ea52931,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -475,30 +500,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6948929613657491233, guid: 7bd896fa1277c694982774a06ea52931,
+    - target: {fileID: 6948929614025912426, guid: 7bd896fa1277c694982774a06ea52931,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948929613657491233, guid: 7bd896fa1277c694982774a06ea52931,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4502481391677538673, guid: 7bd896fa1277c694982774a06ea52931,
-        type: 3}
-      propertyPath: phaseTimeLimits.Array.data[1]
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4502481391677538673, guid: 7bd896fa1277c694982774a06ea52931,
-        type: 3}
-      propertyPath: phaseTimeLimits.Array.data[2]
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4502481391677538673, guid: 7bd896fa1277c694982774a06ea52931,
-        type: 3}
-      propertyPath: phaseTimeLimits.Array.data[3]
-      value: 15
+      propertyPath: maxHealth
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd896fa1277c694982774a06ea52931, type: 3}

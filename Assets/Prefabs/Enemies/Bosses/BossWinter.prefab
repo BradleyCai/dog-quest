@@ -48,6 +48,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -108,6 +109,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -168,6 +170,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -228,6 +231,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -353,6 +357,7 @@ MonoBehaviour:
   speed: 4
   damage: 1
   angleOffset: 0
+  delay: 0
   attackRate: 8
   homingBullet: 0
   rotationSpeed: 0
@@ -413,6 +418,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -473,6 +479,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -533,6 +540,7 @@ MonoBehaviour:
   speed: 4
   damage: 1
   angleOffset: 90
+  delay: 0
   attackRate: 8
   homingBullet: 0
   rotationSpeed: 0
@@ -672,6 +680,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -885,13 +894,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbe3b08d8eea8b42ab955a45ccfc3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  phaseSequence: 0000000001000000020000000300000004000000
+  phaseSequence: 0000000001000000020000000100000003000000
   phaseTimeLimits:
   - 2
-  - 10
-  - 10
-  - 10
-  phaseTime: 0
+  - 15
+  - 15
+  - 15
+  - 15
   phase: 0
   gunSet1:
   - {fileID: 6948929613099483370}
@@ -923,10 +932,10 @@ MonoBehaviour:
   - 1
   rotationDirectionDuration: 4
   rotator: {fileID: 6948929615066070137}
-  set2OnDuration: 4
-  set2OffDuration: 2
-  set3OnDuration: 5
-  set3OffDuration: 4
+  set2OnDuration: 2
+  set2OffDuration: 6
+  set3OnDuration: 2
+  set3OffDuration: 3
 --- !u!1 &6948929613838855619
 GameObject:
   m_ObjectHideFlags: 0
@@ -975,6 +984,7 @@ MonoBehaviour:
   speed: 4
   damage: 1
   angleOffset: 270
+  delay: 0
   attackRate: 8
   homingBullet: 0
   rotationSpeed: 0
@@ -1219,8 +1229,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageTypeTag: Friendly Projectile
-  maxHealth: 1000
+  maxHealth: 500
   bloodbar: {fileID: 6948929613903228635}
+  health: 0
 --- !u!114 &6948929614025912421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,6 +1293,7 @@ MonoBehaviour:
   speed: 2
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 4
   homingBullet: 0
   rotationSpeed: 0
@@ -1441,6 +1453,7 @@ MonoBehaviour:
   speed: 4
   damage: 1
   angleOffset: 180
+  delay: 0
   attackRate: 8
   homingBullet: 0
   rotationSpeed: 0

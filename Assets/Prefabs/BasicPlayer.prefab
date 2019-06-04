@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c226955ffaafc64bb35bd9210ca71e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPowerLevel: 0
+  playerPowerLevel: 4
 --- !u!114 &7762362210234505132
 MonoBehaviour:
   m_ObjectHideFlags: 0
