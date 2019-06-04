@@ -4862,7 +4862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 549b276752beb67449f885470f1d760d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  protectsFrom: Friendly Projectile
+  protectsFrom: Enemy Projectile
 --- !u!114 &7002243503254682556
 MonoBehaviour:
   m_ObjectHideFlags: 0
