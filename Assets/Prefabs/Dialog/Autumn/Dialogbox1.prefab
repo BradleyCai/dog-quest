@@ -170,7 +170,7 @@ GameObject:
   - component: {fileID: 5053480877865869760}
   - component: {fileID: 948985817514237174}
   m_Layer: 0
-  m_Name: Dialogbox1(Clone)
+  m_Name: Dialogbox1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,7 +229,10 @@ MonoBehaviour:
   - "My power... is weak...                \nPlease...             \nI need your help..."
   - Gather the four spirits and unite their power once again. They might be a little
     wary of you, but I promise that they mean no harm.
-  - Please... hurry...
+  - 'Use W A S D to move, Space to shoot.
+
+    Z is your bomb, S is your shield, and C is your homing missles.'
+  - "I'm counting on you          \nPlease hurry..."
 --- !u!1 &6252785421753745829
 GameObject:
   m_ObjectHideFlags: 0
