@@ -2,7 +2,8 @@
 
 [![Dog Quest Video](https://i.imgur.com/1zolTRE.png)](https://youtu.be/ttRBR9wqLR0)
 
-Dog Quest is a shoot-em up game inspired by Japanese Danmaku games. It has been developed in Unity with C#.
+Dog Quest is a shoot-em up game inspired by Japanese Danmaku games. This game was made as a senior design project
+at UCR for the CS179N class. It has been developed in Unity with C#.
 
 ## Features
 
